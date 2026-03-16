@@ -60,7 +60,9 @@ public class HuggyAI : MonoBehaviour
 
     void Update()
     {
+        #if UNITY_EDITOR
         Debug.DrawRay(visionOrigin.position, visionOrigin.forward * 5f, Color.blue);
+        #endif
 
         switch (currentState)
         {

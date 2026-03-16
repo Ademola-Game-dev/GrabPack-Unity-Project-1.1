@@ -19,36 +19,37 @@ public class WeaponDragSway : MonoBehaviour
     public Vector3 restPosition;
 
     public MobileIcons mobileIcons;
+    private bool isMobileCached;
 
     void Start()
     {
-
-
+        // Cache mobile flag at startup to avoid checking every frame
+        isMobileCached = mobileIcons.isMobile;
     }
     void Update()
     {
-        if (mobileIcons.isMobile == false)
+        Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
+
+        float forwardSpeed = Mathf.Max(0f, localVelocity.z);
+
+        Vector3 targetOffset = new Vector3(
+            0f,
+            0f,
+            -forwardSpeed * swayAmount
+        );
+
+        currentOffset = Vector3.SmoothDamp(
+            currentOffset,
+            targetOffset,
+            ref velocity,
+            1f / smoothSpeed
+        );
+
+        transform.localPosition = restPosition + currentOffset;
+
+        // Only apply rotation sway on non-mobile platforms
+        if (!isMobileCached)
         {
-            Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
-
-            float forwardSpeed = Mathf.Max(0f, localVelocity.z);
-
-            Vector3 targetOffset = new Vector3(
-                0f,
-                0f,
-                -forwardSpeed * swayAmount
-            );
-
-            currentOffset = Vector3.SmoothDamp(
-                currentOffset,
-                targetOffset,
-                ref velocity,
-                1f / smoothSpeed
-            );
-
-            transform.localPosition = restPosition + currentOffset;
-
-
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
@@ -68,32 +69,6 @@ public class WeaponDragSway : MonoBehaviour
 
             transform.localRotation = currentRotation;
         }
-
-        if (mobileIcons.isMobile == true)
-        {
-            Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
-
-            float forwardSpeed = Mathf.Max(0f, localVelocity.z);
-
-            Vector3 targetOffset = new Vector3(
-                0f,
-                0f,
-                -forwardSpeed * swayAmount
-            );
-
-            currentOffset = Vector3.SmoothDamp(
-                currentOffset,
-                targetOffset,
-                ref velocity,
-                1f / smoothSpeed
-            );
-
-            transform.localPosition = restPosition + currentOffset;
-
-        }
-
-
-
     }
 
     public Vector3 GetCurrentOffset()
