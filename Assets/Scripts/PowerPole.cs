@@ -5,6 +5,14 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class PowerPole : MonoBehaviour
 {
+    // Static cache of all active PowerPoles to avoid expensive FindObjectsOfType calls
+    private static List<PowerPole> activePoles = new List<PowerPole>();
+    
+    public static List<PowerPole> GetActivePoles()
+    {
+        return activePoles;
+    }
+
     public GameObject glow;
     public float glowcounter = 0.1f;
     public ElectricalSource source;
@@ -19,6 +27,19 @@ public class PowerPole : MonoBehaviour
 
 
     private bool wasPowered = false;
+    
+    void OnEnable()
+    {
+        // Register this pole when enabled
+        if (!activePoles.Contains(this))
+            activePoles.Add(this);
+    }
+    
+    void OnDisable()
+    {
+        // Unregister this pole when disabled
+        activePoles.Remove(this);
+    }
 
     void Awake()
     {

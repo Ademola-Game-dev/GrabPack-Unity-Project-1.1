@@ -10,22 +10,25 @@ public class CableManager : MonoBehaviour
     public List<CablePhysics> cables = new List<CablePhysics>();
 
     public Image cableMeterImage;
+    
+    private float cachedTotalLength = 0f;
 
 
     void LateUpdate()
     {
-        float totalLength = GetTotalCableLength();
+        // Calculate total length once per frame
+        cachedTotalLength = CalculateTotalCableLength();
         UpdateCableUI();
 
-        if (totalLength <= maxCableLength)
+        if (cachedTotalLength <= maxCableLength)
             return;
 
-        float excess = totalLength - maxCableLength;
+        float excess = cachedTotalLength - maxCableLength;
 
         EnforceAllCables(excess);
     }
-
-    public float GetTotalCableLength()
+    
+    private float CalculateTotalCableLength()
     {
         float total = 0f;
 
@@ -38,6 +41,12 @@ public class CableManager : MonoBehaviour
         }
 
         return total;
+    }
+
+    public float GetTotalCableLength()
+    {
+        // Return cached value instead of recalculating
+        return cachedTotalLength;
     }
 
     void EnforceAllCables(float excess)

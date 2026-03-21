@@ -19,20 +19,20 @@ public class WeaponDragSway : MonoBehaviour
     public Vector3 restPosition;
 
     public MobileIcons mobileIcons;
+    private bool isMobileCached;
 
-    public float wallCheckDistance = 0.7f;
-    public float sphereRadius = 0.15f;
-    public float wallPushback = 0.5f;
-    public float pushbackSmoothSpeed = 10f;
-    public LayerMask wallLayers;
-    public Transform cameraTransform;
-
-    float currentPushback = 0f;
-
-    void LateUpdate()
+    void Start()
     {
-        Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
-        float forwardSpeed = Mathf.Max(0f, localVelocity.z);
+
+
+    }
+    void Update()
+    {
+        if (mobileIcons.isMobile == false)
+        {
+            Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
+
+            float forwardSpeed = Mathf.Max(0f, localVelocity.z);
 
         Vector3 targetOffset = new Vector3(
             0f,
@@ -47,50 +47,9 @@ public class WeaponDragSway : MonoBehaviour
             1f / smoothSpeed
         );
 
-        Vector3 animPos = transform.localPosition;
-        Vector3 finalPosition = animPos + currentOffset;
+            transform.localPosition = restPosition + currentOffset;
 
-        RaycastHit hit;
-        float targetPushback = 0f;
 
-        bool hitWall = Physics.SphereCast(
-            cameraTransform.position,
-            sphereRadius,
-            cameraTransform.forward,
-            out hit,
-            wallCheckDistance,
-            wallLayers
-        );
-
-        if (hitWall)
-        {
-            targetPushback = (wallCheckDistance - hit.distance) * wallPushback;
-        }
-        else
-        {
-            if (Physics.CheckSphere(
-                cameraTransform.position + cameraTransform.forward * sphereRadius,
-                sphereRadius,
-                wallLayers))
-            {
-                targetPushback = wallCheckDistance * wallPushback;
-            }
-        }
-
-        targetPushback = Mathf.Clamp(targetPushback, 0f, 0.4f);
-
-        currentPushback = Mathf.Lerp(
-            currentPushback,
-            targetPushback,
-            Time.deltaTime * pushbackSmoothSpeed
-        );
-
-        finalPosition.z -= currentPushback;
-
-        transform.localPosition = finalPosition;
-
-        if (!mobileIcons.isMobile)
-        {
             float mouseX = Input.GetAxis("Mouse X");
             float mouseY = Input.GetAxis("Mouse Y");
 
@@ -108,8 +67,34 @@ public class WeaponDragSway : MonoBehaviour
                 Time.deltaTime * rotationSmoothSpeed
             );
 
-            transform.localRotation = transform.localRotation * currentRotation;
+            transform.localRotation = currentRotation;
         }
+
+        if (mobileIcons.isMobile == true)
+        {
+            Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
+
+            float forwardSpeed = Mathf.Max(0f, localVelocity.z);
+
+            Vector3 targetOffset = new Vector3(
+                0f,
+                0f,
+                -forwardSpeed * swayAmount
+            );
+
+            currentOffset = Vector3.SmoothDamp(
+                currentOffset,
+                targetOffset,
+                ref velocity,
+                1f / smoothSpeed
+            );
+
+            transform.localPosition = restPosition + currentOffset;
+
+        }
+
+
+
     }
 
     public Vector3 GetCurrentOffset()

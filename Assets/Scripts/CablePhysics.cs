@@ -79,7 +79,7 @@ public class CablePhysics : MonoBehaviour
             else
                 aimOverride.leftHitPoint = targetPoint;
 
-
+            #if UNITY_EDITOR
             if (controlsRightArm)
             {
                 Debug.DrawLine(startTransform.position, targetPoint, Color.red);
@@ -88,6 +88,7 @@ public class CablePhysics : MonoBehaviour
             {
                 Debug.DrawLine(startTransform.position, targetPoint, Color.blue);
             }
+            #endif
         }
 
         polesTouchedThisFrame.Clear();
@@ -203,7 +204,8 @@ public class CablePhysics : MonoBehaviour
             }
         }
 
-        PowerPole[] allPoles = FindObjectsOfType<PowerPole>();
+        // Use cached list instead of expensive FindObjectsOfType every frame
+        List<PowerPole> allPoles = PowerPole.GetActivePoles();
 
         foreach (PowerPole pole in allPoles)
         {
