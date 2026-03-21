@@ -238,7 +238,7 @@ public class HuggyAI : MonoBehaviour
             return false;
 
         Vector3 eyePos = visionOrigin.position;
-        Vector3 dirToPlayer = (player.position - eyePos);
+        Vector3 dirToPlayer = (player.position + Vector3.up * 1f - eyePos);
         float distance = dirToPlayer.magnitude;
 
         if (distance > visionRange)
@@ -252,6 +252,7 @@ public class HuggyAI : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(eyePos, dirToPlayer.normalized, out hit, visionRange, visionMask, QueryTriggerInteraction.Collide))
         {
+            Debug.Log("Ray hit: " + hit.transform.name + " Layer: " + LayerMask.LayerToName(hit.transform.gameObject.layer));
 
             if (hit.transform.CompareTag("Player"))
                 return true;

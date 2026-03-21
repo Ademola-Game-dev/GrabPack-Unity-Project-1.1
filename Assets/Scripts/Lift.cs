@@ -4,23 +4,16 @@ using UnityEngine;
 public class Lift : MonoBehaviour
 {
     private Animator anim;
-    public ElectricalReciever powerSource;
-    public Transform target; 
 
+    public Transform target;
     public float LiftSecondsTillTop;
 
     void Start()
     {
-        anim = gameObject.GetComponent<Animator>();
-    }
+        anim = GetComponent<Animator>();
 
-    void Update()
-    {
-        if (powerSource.CircuitComplete)
-        {
-            anim.SetBool("open", true);
-            powerSource.CircuitComplete = false;
-        }
+        anim.SetBool("open", true);
+        //StartMoving();
     }
 
     IEnumerator MoveToTarget(Transform target, float duration)

@@ -1,144 +1,163 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PowerActivator))]
 public class HandScanner : MonoBehaviour
 {
-    public string HandToDectect = "Hand_Blue";
+    public string handToDetect = "Hand_Blue";
 
     public MeshRenderer screen;
-    public Material screenidle;
+    public Material screenIdle;
     public Material screenScanning;
-
-    public bool hasStarted = false;
-
-    public float minOffset = 0f;
-    public float maxOffset = 1f;
-    public float speed = 1f;
+    public Material greenBackground;
 
     public MeshRenderer scanningLabel;
     public Material ready;
     public Material scanning;
-
-    public Material greenbackground;
     public Material verified;
 
-
-    public bool SCANNED = false;
-    private float scanningduration;
-
-    public float ScanDuration;
-
-
     public MeshRenderer handprint;
-    public Material handprintmaterial;
+    public Material handprintMaterial;
     public Material smile;
 
-
-    public Color Green;
-    public Color scannercolour;
-
-
     public Light scannerLight;
+    public Color scannerColour;
+    public Color green;
+
+    public float minOffset = 0f;
+    public float maxOffset = 1f;
+    public float speed = 1f;
+    public float scanDuration;
 
     public GameObject scanningAudio;
 
-    // Start is called before the first frame update
-    void Start()
+    private bool hasStarted;
+    private bool scanned;
+    private float scanningDuration;
+
+    private PowerActivator powerActivator;
+
+    void Awake()
     {
-        scanningduration = 0f;
+        powerActivator = GetComponent<PowerActivator>();
+    }
 
+    void OnEnable()
+    {
+        ResetScanner();
+        powerActivator = GetComponent<PowerActivator>();
 
-        scannerLight.color = scannercolour;
 
     }
 
-    // Update is called once per frame
+    void OnDisable()
+    {
+        if (scanningAudio != null)
+            scanningAudio.SetActive(false);
+    }
+
     void Update()
     {
-        Vector2 offset3 = ready.mainTextureOffset;
-        offset3.x += speed / 2 * Time.deltaTime; 
-        ready.mainTextureOffset = offset3;
+        ScrollMaterial(ready);
 
-        if (!SCANNED)
+        if (!scanned)
         {
-            Transform child = transform.Find(HandToDectect);
+            Transform child = transform.Find(handToDetect);
+
             if (child != null)
             {
-                if (hasStarted == false)
-                {
-                    Vector2 offset2 = scanning.mainTextureOffset;
-                    offset2.x = 0;
-                    startScanning();
-
-
-                }
-
+                if (!hasStarted)
+                    StartScanning();
             }
             else
             {
-                screen.material = screenidle;
-                hasStarted = false;
-                scanningLabel.material = ready;
-                Vector2 offset2 = scanning.mainTextureOffset;
-                offset2.x = 0;
-
-                scanningAudio.SetActive(false);
-
-
+                ResetIdleState();
             }
+
             if (hasStarted)
             {
-                scanningduration += Time.deltaTime;
+                scanningDuration += Time.deltaTime;
 
-
-                Vector2 offset2 = scanning.mainTextureOffset;
-                offset2.x += speed / 2 * Time.deltaTime; 
-                scanning.mainTextureOffset = offset2;
-
-
+                ScrollMaterial(scanning);
 
                 float offset = Mathf.Lerp(minOffset, maxOffset, Mathf.PingPong(Time.time * speed, 1f));
-                screenScanning.mainTextureOffset = new Vector2(screenScanning.mainTextureOffset.x, offset);
+                screenScanning.mainTextureOffset =
+                    new Vector2(screenScanning.mainTextureOffset.x, offset);
 
-
-
-                if (scanningduration > ScanDuration)
-                {
-                    SCANNED = true;
-                }
+                if (scanningDuration > scanDuration)
+                    CompleteScan();
             }
         }
-        if (SCANNED)
+        else
         {
-            handprint.material = smile;
-            scannerLight.color = Green;
-
-
-            screen.material = greenbackground;
-            hasStarted = false;
-            scanningLabel.material = verified;
-
-            Vector2 offset4 = verified.mainTextureOffset;
-            offset4.x += speed / 2 * Time.deltaTime; 
-            verified.mainTextureOffset = offset4;
+            ScrollMaterial(verified);
         }
-
-
-
-
     }
 
-    public void startScanning()
+    void StartScanning()
     {
-        scanningduration = 0f;
-        scanningAudio.SetActive(true);
-        Vector2 offset2 = scanning.mainTextureOffset;
-        offset2.x = 0;
-        scanningLabel.material = scanning;
+        scanningDuration = 0f;
+
+        if (scanDuration <= 0f)
+            scanDuration = 1f;
+
         hasStarted = true;
 
-        screen.material = screenScanning;
+        if (scanningAudio != null)
+            scanningAudio.SetActive(true);
 
+        scanningLabel.material = scanning;
+        screen.material = screenScanning;
+    }
+
+    void CompleteScan()
+    {
+        scanned = true;
+
+        handprint.material = smile;
+        scannerLight.color = green;
+
+        screen.material = greenBackground;
+        scanningLabel.material = verified;
+        hasStarted = false;
+
+        if (scanningAudio != null)
+            scanningAudio.SetActive(false);
+
+        if (powerActivator != null)
+            powerActivator.Activate();
+    }
+
+    void ResetScanner()
+    {
+        scanned = false;
+        hasStarted = false;
+        scanningDuration = 0f;
+
+        scannerLight.color = scannerColour;
+
+        if (screen != null)
+            screen.material = screenIdle;
+
+        if (scanningLabel != null)
+            scanningLabel.material = ready;
+    }
+
+    void ResetIdleState()
+    {
+        screen.material = screenIdle;
+        scanningLabel.material = ready;
+        hasStarted = false;
+
+        if (scanningAudio != null)
+            scanningAudio.SetActive(false);
+    }
+
+    void ScrollMaterial(Material mat)
+    {
+        if (mat == null) return;
+
+        Vector2 offset = mat.mainTextureOffset;
+        offset.x += speed * 0.5f * Time.deltaTime;
+        mat.mainTextureOffset = offset;
     }
 }

@@ -34,6 +34,8 @@ public class SettingsManager : MonoBehaviour
 
     public MobileIcons mobileIcons;
 
+    public WeaponDragSway ItemDrag;
+
 
     void Start()
     {
@@ -67,6 +69,7 @@ public class SettingsManager : MonoBehaviour
     {
         animator.SetBool("open", state);
         playerController.enabled = !state;
+        ItemDrag.enabled = !state;
 
         if (playerAnimator != null)
         {

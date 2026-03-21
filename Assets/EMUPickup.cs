@@ -9,6 +9,8 @@ public class EMUPickup : MonoBehaviour
     public AudioClip pickupsx;
     public HandManager handmanager;
 
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,5 +28,8 @@ public class EMUPickup : MonoBehaviour
         gameObject.SetActive(false);
         globalaudio.PlayOneShot(pickupsx, 1.0f);
         handmanager.HasEMUCuffs = true;
+
+
+
     }
 }

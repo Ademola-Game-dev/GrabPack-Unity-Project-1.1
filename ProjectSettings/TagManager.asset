@@ -34,8 +34,8 @@ TagManager:
   - points
   - monster
   - EMUpickup
-  - 
-  - 
+  - NoDelete
+  - keycard
   - 
   - 
   - 

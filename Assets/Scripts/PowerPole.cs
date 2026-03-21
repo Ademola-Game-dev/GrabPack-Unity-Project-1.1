@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class PowerPole : MonoBehaviour
 {
     // Static cache of all active PowerPoles to avoid expensive FindObjectsOfType calls
@@ -16,7 +17,7 @@ public class PowerPole : MonoBehaviour
     public float glowcounter = 0.1f;
     public ElectricalSource source;
 
-    public AudioSource GlobalAudio;
+    private AudioSource GlobalAudio;
     public AudioClip connect;
     public AudioClip disconnect;
 
@@ -38,6 +39,12 @@ public class PowerPole : MonoBehaviour
     {
         // Unregister this pole when disabled
         activePoles.Remove(this);
+    }
+
+    void Awake()
+    {
+        GlobalAudio = GetComponent<AudioSource>();
+
     }
 
     public void Startglow()

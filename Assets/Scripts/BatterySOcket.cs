@@ -1,68 +1,77 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PowerActivator))]
 public class BatterySOcket : MonoBehaviour
 {
+    [SerializeField] private LayerMask batteryLayer;
+    [SerializeField] private Transform batterySnapPoint;
 
-    public LayerMask batteryLayer;
-    public GameObject batteryPOS;
+    private PowerActivator powerActivator;
 
-    public bool full = false;
+    private Collider currentBattery;
+    private Rigidbody batteryRb;
 
-    public Collider batterycollider;
-    // Start is called before the first frame update
-    void Start()
+    public bool IsFull => currentBattery != null;
+
+    void Awake()
     {
-        
+        powerActivator = GetComponent<PowerActivator>();
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerStay(Collider other)
     {
-        
+        if (currentBattery != null)
+            return;
+
+        if ((batteryLayer & (1 << other.gameObject.layer)) == 0)
+            return;
+
+        Rigidbody rb = other.GetComponent<Rigidbody>();
+        if (rb == null)
+            return;
+
+        InsertBattery(other, rb);
     }
 
-    public void OnTriggerStay(Collider other)
+    void OnTriggerExit(Collider other)
     {
-
-        if (full == false)
+        if (other == currentBattery)
         {
-            if ((batteryLayer & (1 << other.gameObject.layer)) != 0 && other.gameObject.name != "Gear")
-            {
-
-
-                Rigidbody rb = other.GetComponent<Rigidbody>();
-                rb.isKinematic = true;
-                other.gameObject.transform.position = batteryPOS.transform.position;
-                other.gameObject.transform.rotation = batteryPOS.transform.rotation;
-                full = true;
-
-                batterycollider = other;
-            }
+            RemoveBattery();
         }
-
-
-
-    }
-
-    public void OnTriggerExit(Collider other)
-    {
-
-        if ((batteryLayer & (1 << other.gameObject.layer)) != 0)
-        {
- 
-            full = false;
-        }
-
     }
 
     void LateUpdate()
     {
-        if (batterycollider.gameObject.transform.position != batteryPOS.transform.position)
+        if (currentBattery == null)
+            return;
+
+        if (currentBattery.transform.position != batterySnapPoint.position)
         {
-            full = false;
-            batterycollider = null;
+            RemoveBattery();
         }
+    }
+
+    void InsertBattery(Collider battery, Rigidbody rb)
+    {
+        currentBattery = battery;
+        batteryRb = rb;
+
+        rb.isKinematic = true;
+
+        battery.transform.position = batterySnapPoint.position;
+        battery.transform.rotation = batterySnapPoint.rotation;
+
+        powerActivator.Activate();
+    }
+
+    void RemoveBattery()
+    {
+
+
+        currentBattery = null;
+        batteryRb = null;
+
+        powerActivator.Deactivate();
     }
 }

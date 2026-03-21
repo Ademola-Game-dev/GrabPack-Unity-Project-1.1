@@ -11,6 +11,7 @@ public class Interact : MonoBehaviour
     public LayerMask grabpackinteractable;
     public LayerMask handpickups;
     public LayerMask EMUPickup;
+    public LayerMask keycard;
 
     public Animator grabpack;
     public GameObject interactButtonUI;
@@ -23,7 +24,7 @@ public class Interact : MonoBehaviour
 
     void Start()
     {
-        interactLayers = buttonLayer | CodeCheckerLayer | grabpackinteractable | handpickups | EMUPickup;
+        interactLayers = buttonLayer | CodeCheckerLayer | grabpackinteractable | handpickups | EMUPickup | keycard;
     }
 
     void Update()
@@ -101,6 +102,12 @@ public class Interact : MonoBehaviour
                 EMUPickup pickup = hitObject.GetComponent<EMUPickup>();
                 if (pickup != null)
                     pickup.Pickup();
+            }
+            else if (((1 << hitObject.layer) & keycard) != 0)
+            {
+                KeyCardScanner pickup = hitObject.GetComponent<KeyCardScanner>();
+                if (pickup != null)
+                    pickup.Insert();
             }
         }
     }

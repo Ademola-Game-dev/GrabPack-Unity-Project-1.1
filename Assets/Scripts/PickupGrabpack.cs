@@ -9,6 +9,7 @@ public class PickupGrabpack : MonoBehaviour
     public bool hasPurpleHand = true;
     public bool hasPressureHand = true;
     public bool hasConductiveHand = true;
+    public bool hasMagnetHand = true;
 
 
     public GameObject RedHand;
@@ -16,6 +17,7 @@ public class PickupGrabpack : MonoBehaviour
     public GameObject FlareHand;
     public GameObject conductiveHand;
     public GameObject BlueHand;
+    public GameObject MagnetHand;
 
 
     public GameObject MockRedHand;
@@ -23,6 +25,7 @@ public class PickupGrabpack : MonoBehaviour
     public GameObject MockFlareHand;
     public GameObject MockconductiveHand;
     public GameObject MockBlueHand;
+    public GameObject MockMagnetHand;
 
     public HandManager handmanager;
 
@@ -40,6 +43,7 @@ public class PickupGrabpack : MonoBehaviour
         PurpleHand.SetActive(false);
         FlareHand.SetActive(false);
         conductiveHand.SetActive(false);
+        MagnetHand.SetActive(false);
 
         if (hasRedHand)
             RedHand.SetActive(true);
@@ -49,6 +53,8 @@ public class PickupGrabpack : MonoBehaviour
             FlareHand.SetActive(true);
         else if (hasConductiveHand)
             conductiveHand.SetActive(true);
+        else if (hasMagnetHand)
+            MagnetHand.SetActive(true);
 
         handmanager.hasGrabPack = true;
 
@@ -57,6 +63,7 @@ public class PickupGrabpack : MonoBehaviour
         handmanager.hasPressureHand = hasPressureHand;
         handmanager.hasPurpleHand = hasPurpleHand;
         handmanager.hasConductiveHand = hasConductiveHand;
+        handmanager.hasMagnetHand = hasMagnetHand;
 
         player.UpdateHandButtons();
 
@@ -90,5 +97,7 @@ public class PickupGrabpack : MonoBehaviour
             MockFlareHand.SetActive(true);
         else if (hasConductiveHand)
             MockconductiveHand.SetActive(true);
+        else if (hasMagnetHand)
+            MockMagnetHand.SetActive(true);
     }
 }

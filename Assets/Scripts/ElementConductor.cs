@@ -46,4 +46,14 @@ public class ElementConductor : MonoBehaviour
             played = false;
         }
     }
+
+    public void RejectHand()
+    {
+        LaunchHand[] hands = GetComponentsInChildren<LaunchHand>();
+
+        foreach (LaunchHand hand in hands)
+        {
+            hand.return1();
+        }
+    }
 }

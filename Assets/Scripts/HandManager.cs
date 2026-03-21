@@ -8,6 +8,7 @@ public class HandManager : MonoBehaviour
     public bool hasPressureHand = true;
     public bool hasConductiveHand = true;
     public bool HasEMUCuffs = false;
+    public bool hasMagnetHand = true;
 
     public bool hasGrabPack = true;
     public GameObject grabpack;
@@ -17,7 +18,7 @@ public class HandManager : MonoBehaviour
 
     void Start()
     {
-        if (!hasRedHand && !hasBlueHand && !hasPurpleHand && !hasPressureHand && !hasConductiveHand)
+        if (!hasRedHand && !hasBlueHand && !hasPurpleHand && !hasPressureHand && !hasConductiveHand && !hasMagnetHand)
         {
             hasGrabPack = false;
         }
@@ -30,6 +31,8 @@ public class HandManager : MonoBehaviour
             hasPurpleHand = false;
             hasPressureHand = false;
             hasConductiveHand = false;
+            hasMagnetHand = false;
+
         }
 
 

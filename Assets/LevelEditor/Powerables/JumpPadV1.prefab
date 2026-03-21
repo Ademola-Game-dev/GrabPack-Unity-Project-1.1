@@ -289,7 +289,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8194690710008792123}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.0000004216439}
   m_LocalPosition: {x: 7.637, y: 0.981, z: -120.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -425,9 +425,4 @@ MonoBehaviour:
   maxBoostDistance: 25
   minBoostMultiplier: 0
   cooldownTime: 1
-  powerSource: {fileID: 0}
-  poweredMaterial: {fileID: 2100000, guid: df5349a046538c841aba3a78fa5ab22f, type: 2}
-  offMaterial: {fileID: 2100000, guid: 9b8118498503a3949be3a78697e6279e, type: 2}
-  lightObject: {fileID: 6519897129083363270}
   boostSFX: {fileID: 8300000, guid: 9b626db6505ce3f4fa81ef94da9b0c77, type: 3}
-  renderer: {fileID: 0}

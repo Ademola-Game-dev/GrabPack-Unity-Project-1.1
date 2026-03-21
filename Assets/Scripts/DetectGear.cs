@@ -1,25 +1,35 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PowerActivator))]
 public class DetectGear : MonoBehaviour
 {
-    public GameObject GearToDetect;
+    public GameObject gearToDetect;
+    public GameObject gearVisual;
 
-    public GameObject GearVisual;
+    private bool complete = false;
+    private PowerActivator powerActivator;
 
-    public bool complete = false;
+    void Awake()
+    {
+        powerActivator = GetComponent<PowerActivator>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == GearToDetect)
-        {
+        if (complete)
+            return;
 
-            Destroy(GearToDetect);
-            GearVisual.SetActive(true);
+        if (other.gameObject == gearToDetect)
+        {
+            Destroy(gearToDetect);
+
+            if (gearVisual != null)
+                gearVisual.SetActive(true);
+
             complete = true;
+
+            if (powerActivator != null)
+                powerActivator.Activate();
         }
     }
-
-
 }

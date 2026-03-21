@@ -13,23 +13,28 @@ public class ElectricalSource : MonoBehaviour
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
-
-        cableMaterials = FindObjectOfType<CableMaterials>();
+        cableMaterials = FindAnyObjectByType<CableMaterials>(FindObjectsInactive.Include);
+        CheckPowerState();
     }
 
-    void Update()
+    void OnTransformChildrenChanged()
     {
-        bool shouldBePowered = transform.childCount > 0;
+        CheckPowerState();
+    }
 
-        if (shouldBePowered != Powering)
-        {
-            Powering = shouldBePowered;
+    void CheckPowerState()
+    {
+        bool shouldBePowered = transform.childCount > 6;
 
-            if (cableMaterials != null)
-                cableMaterials.SetPowered(Powering);
+        if (shouldBePowered == Powering)
+            return;
 
-            if (Powering && powerOnSFX != null)
-                audioSource.PlayOneShot(powerOnSFX);
-        }
+        Powering = shouldBePowered;
+
+        if (cableMaterials != null)
+            cableMaterials.SetPowered(Powering);
+
+        if (Powering && powerOnSFX != null)
+            audioSource.PlayOneShot(powerOnSFX);
     }
 }

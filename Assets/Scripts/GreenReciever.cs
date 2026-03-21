@@ -1,106 +1,92 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PowerActivator))]
+[RequireComponent(typeof(AudioSource))]
 public class GreenReciever : MonoBehaviour
 {
+    private PowerActivator powerActivator;
+    private AudioSource audioSource;
 
-    public AudioSource globalAudio;
-    public AudioClip greensfx;
-    private bool played = false;
+    [SerializeField] private AudioClip greenSFX;
 
-    public ParticleSystem grabparticles;
+    [SerializeField] private ParticleSystem grabParticles;
+    [SerializeField] private GameObject poweredLight;
 
-    public Door door;
+    public float lifeTime = 15f;
 
-    public float livetime = 15;
-    private float livecount = 0;
+    private float liveCount;
+    private bool powered;
+    private bool played;
 
-    public bool powered = false;
-
-    public GameObject poweredLight;
-    private bool wasPowered = false;
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        livecount = livetime;
-
+        powerActivator = GetComponent<PowerActivator>();
+        audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+    void Start()
+    {
+        liveCount = lifeTime;
+    }
+
     void Update()
     {
-        Transform child1 = transform.Find("Hand_Conductive");
+        Transform hand = transform.Find("Hand_Conductive");
 
-
-        if (child1 != null)
+        if (hand != null)
         {
+            Conductor conductor = hand.GetComponent<Conductor>();
+            LaunchHand launchHand = hand.GetComponent<LaunchHand>();
 
-            Conductor conductor = child1.GetComponent<Conductor>();
-            LaunchHand launchhand = child1.GetComponent<LaunchHand>();
-
-            if (played == false && conductor.CurrentElement == "green")
+            if (!played && conductor != null && conductor.CurrentElement == "green")
             {
+                ActivatePower();
 
+                if (grabParticles != null)
+                    grabParticles.Play();
 
-                if (grabparticles != null)
-                {
-                    grabparticles.Play();
-                }
-                globalAudio.PlayOneShot(greensfx, 3.0f);
+                if (greenSFX != null)
+                    audioSource.PlayOneShot(greenSFX, 3f);
+
+                if (launchHand != null)
+                    launchHand.return1();
+
                 played = true;
-
-
-                launchhand.return1();
-
-                powered = true;
-
-
-
             }
-
-
-
-
-
-
         }
         else
         {
             played = false;
-
         }
-
-
-
 
         if (powered)
         {
-            poweredLight.SetActive(true);
-            livecount -= Time.deltaTime;
-            if (livecount <= 0)
-            {
-                powered = false;
-                livecount = livetime;
-            }
+            liveCount -= Time.deltaTime;
 
-            if (!wasPowered)
-            {
-                door.Locked = false;
-                door.Open();
-                wasPowered = true;
-            }
+            if (liveCount <= 0)
+                DeactivatePower();
         }
-        else
-        {
-            if (wasPowered)
-            {
-                door.Locked = true;
-                door.animator.SetBool("open", false);
-                wasPowered = false;
-            }
+    }
+
+    void ActivatePower()
+    {
+        powered = true;
+        liveCount = lifeTime;
+
+        if (poweredLight != null)
+            poweredLight.SetActive(true);
+
+        powerActivator.Activate();
+    }
+
+    void DeactivatePower()
+    {
+        powered = false;
+        liveCount = lifeTime;
+
+        if (poweredLight != null)
             poweredLight.SetActive(false);
 
-        }
+        powerActivator.Deactivate();
     }
 }

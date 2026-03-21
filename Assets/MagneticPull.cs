@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,69 +6,95 @@ public class MagneticPull : MonoBehaviour
     public RigidboyPlayerController controller;
     public Rigidbody Player;
     public float pullSpeed = 20f;
+
     private bool wasBeingPulled = false;
     public bool isgrabbingRight;
     public bool grabbed = false;
-
     public bool isBeingPulled = false;
 
     public AudioSource globalaudio;
     public AudioClip pullsfx;
 
-    private bool virtualHeld;
-    bool isMobile = false;
-
     public HandManager handmanager;
+    public GameObject dragaudio;
 
-    public void UIButtonDown()
+    public magnetHand MagnetHand;
+    private bool magnetWasHeld = false;
+    private List<LaunchHand> hands = new List<LaunchHand>();
+
+    void Start()
     {
-        virtualHeld = true;
+        RefreshHands();
     }
 
-    public void UIButtonUp()
+    void OnTransformChildrenChanged()
     {
-        virtualHeld = false;
+        RefreshHands();
     }
 
-    void FixedUpdate()
+    void RefreshHands()
     {
-        if (handmanager.HasEMUCuffs == false) return;
-
-        bool rightHandFound = false;
-        bool anyHandFound = false;
-
-        isBeingPulled = false;
+        hands.Clear();
 
         foreach (Transform child in transform)
         {
             if (!child.name.StartsWith("Hand"))
                 continue;
 
-            anyHandFound = true;
+            if (child.TryGetComponent(out LaunchHand hand))
+                hands.Add(hand);
+        }
+    }
 
-            LaunchHand hand = child.GetComponent<LaunchHand>();
-            if (hand == null)
-                continue;
+    void FixedUpdate()
+    {
+        bool hasCuffs = handmanager.HasEMUCuffs;
 
-            bool isHeld = hand.IsHeld();
+        bool rightHandFound = false;
 
-            bool rightHand =
-                child.name == "Hand_Rocket" ||
-                child.name == "Hand_Red" ||
-                child.name == "Hand_Pressure" ||
-                child.name == "Hand_Conductive";
+        isBeingPulled = false;
 
-            bool leftHand = child.name == "Hand_Blue";
+        foreach (LaunchHand hand in hands)
+        {
+            string name = hand.gameObject.name;
 
-            if (rightHand && isHeld)
+            if (name == "Hand_Magnet")
             {
-                ApplyPull();
-                isgrabbingRight = true;
-                rightHandFound = true;
-                isBeingPulled = true;
+                bool isHeld = hand.IsHeld();
+
+                if (isHeld && !magnetWasHeld)
+                {
+                    MagnetHand.TogglePolarity();
+                    hand.return1();
+                }
+
+                magnetWasHeld = isHeld;
             }
 
-            if (leftHand && isHeld && !isgrabbingRight)
+            if (!hand.IsHeld())
+                continue;
+
+            bool rightHand =
+                name == "Hand_Rocket" ||
+                name == "Hand_Red" ||
+                name == "Hand_Pressure" ||
+                name == "Hand_Magnet" ||
+                name == "Hand_Conductive";
+
+            bool leftHand = name == "Hand_Blue";
+
+            if (rightHand)
+            {
+                if (name != "Hand_Magnet" && hasCuffs)
+                {
+                    ApplyPull();
+                    isgrabbingRight = true;
+                    rightHandFound = true;
+                    isBeingPulled = true;
+                }
+            }
+
+            if (leftHand && !isgrabbingRight && hasCuffs)
             {
                 ApplyPull();
                 isBeingPulled = true;
@@ -79,6 +104,11 @@ public class MagneticPull : MonoBehaviour
         if (!rightHandFound)
             isgrabbingRight = false;
 
+        HandlePullState();
+    }
+
+    void HandlePullState()
+    {
         if (isBeingPulled && !wasBeingPulled)
         {
             controller.CanMove = false;
@@ -90,6 +120,8 @@ public class MagneticPull : MonoBehaviour
             grabbed = false;
             Player.useGravity = true;
             globalaudio.Stop();
+            dragaudio.SetActive(false);
+
 
         }
 
@@ -99,12 +131,11 @@ public class MagneticPull : MonoBehaviour
     void ApplyPull()
     {
         Player.useGravity = false;
-
-        Vector3 targetPosition = transform.position;
+        dragaudio.SetActive(true);
 
         Vector3 newPosition = Vector3.MoveTowards(
             Player.position,
-            targetPosition,
+            transform.position,
             pullSpeed * Time.fixedDeltaTime
         );
 
@@ -114,6 +145,16 @@ public class MagneticPull : MonoBehaviour
         {
             globalaudio.PlayOneShot(pullsfx, 0.3f);
             grabbed = true;
+        }
+    }
+
+    public void RejectHand()
+    {
+        LaunchHand[] hands = GetComponentsInChildren<LaunchHand>();
+
+        foreach (LaunchHand hand in hands)
+        {
+            hand.return1();
         }
     }
 }

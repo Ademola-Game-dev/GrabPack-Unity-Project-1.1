@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class freeze : MonoBehaviour
@@ -22,67 +20,89 @@ public class freeze : MonoBehaviour
 
     public Breakable breakable;
 
-    void Update()
+    private Conductor conductor;
+    private LaunchHand launchhand;
+
+    void OnTransformChildrenChanged()
     {
-        Transform conductiveHand = null;
+        FindConductiveHand();
+    }
+
+    void Start()
+    {
+        FindConductiveHand();
+    }
+
+    void FindConductiveHand()
+    {
+        conductor = null;
+        launchhand = null;
 
         foreach (Transform child in transform)
         {
             if (child.name == "Hand_Conductive")
             {
-                conductiveHand = child;
+                child.TryGetComponent(out conductor);
+                child.TryGetComponent(out launchhand);
                 break;
             }
         }
+    }
 
-        if (conductiveHand != null)
-        {
-            Conductor conductor = conductiveHand.GetComponent<Conductor>();
-            LaunchHand launchhand = conductiveHand.GetComponent<LaunchHand>();
-
-            if (!played && conductor.CurrentElement == "ice")
-            {
-                if (!frozen)
-                {
-                    if (grabparticles != null)
-                        grabparticles.Play();
-
-                    foreach (MeshRenderer render in renderers)
-                        render.material = frozenmat;
-
-                    globalAudio.PlayOneShot(icesfx, 3.0f);
-
-                    played = true;
-                    frozen = true;
-                    breakable.isbreakable = true;
-
-                    launchhand.return1();
-                }
-            }
-
-            if (!played && conductor.CurrentElement == "fire")
-            {
-                if (frozen)
-                {
-                    if (heatedparticles != null)
-                        heatedparticles.Play();
-
-                    foreach (MeshRenderer render in renderers)
-                        render.material = unfrozen;
-
-                    globalAudio.PlayOneShot(firesfx, 3.0f);
-
-                    played = true;
-                    frozen = false;
-                    breakable.isbreakable = false;
-
-                    launchhand.return1();
-                }
-            }
-        }
-        else
+    void Update()
+    {
+        if (conductor == null)
         {
             played = false;
+            return;
         }
+
+        if (!played && conductor.CurrentElement == "ice" && !frozen)
+        {
+            FreezeObject();
+        }
+
+        if (!played && conductor.CurrentElement == "fire" && frozen)
+        {
+            UnfreezeObject();
+        }
+    }
+
+    void FreezeObject()
+    {
+        if (grabparticles != null)
+            grabparticles.Play();
+
+        foreach (MeshRenderer r in renderers)
+            r.sharedMaterial = frozenmat;
+
+        globalAudio.PlayOneShot(icesfx, 3f);
+
+        played = true;
+        frozen = true;
+
+        breakable.isbreakable = true;
+
+        if (launchhand != null)
+            launchhand.return1();
+    }
+
+    void UnfreezeObject()
+    {
+        if (heatedparticles != null)
+            heatedparticles.Play();
+
+        foreach (MeshRenderer r in renderers)
+            r.sharedMaterial = unfrozen;
+
+        globalAudio.PlayOneShot(firesfx, 3f);
+
+        played = true;
+        frozen = false;
+
+        breakable.isbreakable = false;
+
+        if (launchhand != null)
+            launchhand.return1();
     }
 }

@@ -1,86 +1,96 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Door : MonoBehaviour
 {
     public bool Locked = false;
     public Animator animator;
 
-    public HandScanner ConnectedHandScanner;
+    public AudioClip openSFX;
+    public AudioClip closeSFX;
 
-    public bool hasopened = false;
-    private bool JustUnlocked = false;
+    private AudioSource audioSource;
 
-    public AudioSource audiosource;
-    public AudioClip opensfx;
-    public AudioClip closesfx;
+    private bool handTriggered; 
+
+    void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     void Update()
     {
-        if (!Locked)
+        if (Locked)
+            return;
+
+        HandleKeyboard();
+        HandleHandInteraction();
+    }
+
+    void HandleKeyboard()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Camera cam = Camera.main;
-                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            Camera cam = Camera.main;
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
 
-                if (Physics.Raycast(ray, out RaycastHit hit, 2f))
+            if (Physics.Raycast(ray, out RaycastHit hit, 2f))
+            {
+                if (hit.collider.GetComponent<Door>() == this)
                 {
-                    Door door = hit.collider.GetComponent<Door>();
-                    if (door != null)
-                    {
-                        door.Open();
-                    }
+                    ToggleDoor();
                 }
-            }
-
-            bool handAttached = false;
-
-            foreach (Transform child in transform)
-            {
-                if (child.name.StartsWith("Hand"))
-                {
-                    handAttached = true;
-                    break;
-                }
-            }
-
-            if (handAttached)
-            {
-                if (!JustUnlocked && !hasopened)
-                {
-                    Open();
-                    hasopened = true;
-                }
-            }
-            else
-            {
-                hasopened = false;
-                JustUnlocked = false;
-            }
-        }
-        else
-        {
-            if (ConnectedHandScanner.SCANNED)
-            {
-                Locked = false;
-                JustUnlocked = true;
             }
         }
     }
 
-    public void Open()
+    void HandleHandInteraction()
     {
-        if (Locked) return;
+        bool handAttached = false;
+
+        foreach (Transform child in transform)
+        {
+            if (child.name.StartsWith("Hand"))
+            {
+                handAttached = true;
+                break;
+            }
+        }
+
+        if (handAttached && !handTriggered)
+        {
+            ToggleDoor();
+            handTriggered = true;
+        }
+
+        if (!handAttached)
+        {
+            handTriggered = false;
+        }
+    }
+
+    public void ToggleDoor()
+    {
+        if (Locked)
+            return;
 
         bool open = animator.GetBool("open");
 
         animator.SetBool("open", !open);
 
         if (open)
-            audiosource.PlayOneShot(closesfx, 1.0f);
+            audioSource.PlayOneShot(closeSFX);
         else
-            audiosource.PlayOneShot(opensfx, 1.0f);
+            audioSource.PlayOneShot(openSFX);
+    }
+
+    public void Unlock()
+    {
+        Locked = false;
+    }
+
+    public void Lock()
+    {
+        Locked = true;
     }
 }

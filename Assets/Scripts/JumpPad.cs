@@ -8,71 +8,36 @@ public class JumpPad : MonoBehaviour
     public float minBoostMultiplier = 0.2f;
     public float cooldownTime = 2f;
 
-    [Header("Power (Optional)")]
-    public ElectricalReciever powerSource;
-
-    public Material poweredMaterial;
-    public Material offMaterial;
-    public GameObject lightObject;
-
     public AudioClip boostSFX;
 
     private AudioSource audioSource;
-    private MeshRenderer meshRenderer;
-
     private float cooldownTimer;
-    private bool launched;
-    private bool Powered;
 
 
     void Awake()
     {
         audioSource = GetComponent<AudioSource>();
 
-        Powered = powerSource == null || powerSource.CircuitComplete;
-
-        ApplyVisualState();
     }
 
     void Update()
     {
-        HandlePowerState();
         cooldownTimer -= Time.deltaTime;
-    }
-
-    private void HandlePowerState()
-    {
-        bool shouldBePowered = powerSource == null || powerSource.CircuitComplete;
-
-        if (shouldBePowered == Powered)
-            return;
-
-        Powered = shouldBePowered;
-        ApplyVisualState();
-    }
-
-    private void ApplyVisualState()
-    {
-
-
-        if (lightObject != null)
-            lightObject.SetActive(Powered);
     }
 
     void OnTransformChildrenChanged()
     {
+        if (!enabled)
+            return;
 
-        Debug.Log("Children changed!");
-    
-
-        if (!Powered || cooldownTimer > 0)
+        if (cooldownTimer > 0)
             return;
 
         LaunchHand hand = GetComponentInChildren<LaunchHand>();
         if (hand == null)
             return;
 
-        if (hand.isRocketHand == false)
+        if (!hand.isRocketHand)
             return;
 
         Rigidbody playerRb = hand.ownerRigidbody;

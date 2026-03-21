@@ -4,12 +4,16 @@ using System.Collections.Generic;
 public class ElectricalReciever : MonoBehaviour
 {
     [SerializeField] private List<PowerPole> polesInPuzzle;
-    [SerializeField] private AudioSource globalAudio;
-    [SerializeField] private AudioClip puzzleCompleteSFX;
 
-    public bool CircuitComplete;
+
+    private PowerActivator powerActivator;
 
     private bool complete;
+
+    void Awake()
+    {
+        powerActivator = GetComponent<PowerActivator>();
+    }
 
     void Update()
     {
@@ -44,11 +48,11 @@ public class ElectricalReciever : MonoBehaviour
 
     private void CompleteCircuit()
     {
-        CircuitComplete = true;
         complete = true;
 
-        if (globalAudio != null && puzzleCompleteSFX != null)
-            globalAudio.PlayOneShot(puzzleCompleteSFX);
+        if (powerActivator != null)
+            powerActivator.Activate();
+
 
         ReturnAllHands();
     }

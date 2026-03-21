@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HuggyDemo.unity
     guid: 855b04f15e161d0439b4ba043696d33a
+  - enabled: 1
+    path: Assets/Scenes/FactoryDemo.unity
+    guid: fcf6f5fc1ed64164bad28b4a0360b630
   m_configObjects: {}

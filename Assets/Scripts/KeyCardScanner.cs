@@ -1,50 +1,30 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(PowerActivator))]
 public class KeyCardScanner : MonoBehaviour
 {
     public Animator animator;
-    public Animator doorAnimator;
-
     public KeyCard connectedCard;
 
-    // Start is called before the first frame update
-    void Start()
+    private PowerActivator powerActivator;
+
+    void Awake()
     {
-        
+        powerActivator = GetComponent<PowerActivator>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (connectedCard.PICKED == true)
-            {
-                Camera cam = Camera.main;
-                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out RaycastHit hit, 2f))
-                {
-                    if (hit.collider.gameObject == gameObject)
-                    {
-                        KeyCardScanner scanner = GetComponent<KeyCardScanner>();
-                        scanner.Insert();
-                    }
-                }
-            }
-
-
-        }
-
-    }
 
     public void Insert()
     {
-        animator.SetBool("insert", true);
-        doorAnimator.SetBool("open", true);
+        if (connectedCard != null && connectedCard.PICKED)
+        {
+
+            if (animator != null)
+                animator.SetBool("insert", true);
+
+            if (powerActivator != null)
+                powerActivator.Activate();
+        }
 
     }
 }

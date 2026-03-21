@@ -66,6 +66,9 @@ public class LaunchHand : MonoBehaviour
 
     public bool isRocketHand = false;
     public bool isPressureHand = false;
+    public bool isMagnetHand = false;
+    public GameObject magnetsparks;
+
     public float pressure = 0;
 
     public GameObject SMOKE;
@@ -87,6 +90,10 @@ public class LaunchHand : MonoBehaviour
     private bool applyDragForce;
 
     public MobileIcons mobileIcons;
+
+    private float oldmass;
+    private bool massModified = false;
+
 
     void Start()
     {
@@ -295,11 +302,42 @@ public class LaunchHand : MonoBehaviour
             Vector3 targetPos = handOrigin.position;
             Vector3 direction = targetPos - currentDraggedRB.position;
 
-            Vector3 force =
-                direction.normalized * (pullSpeed * 600f)
-                - currentDraggedRB.velocity * 8f;
+            magnetHand magnethand;
+            bool hasMagnet = gameObject.TryGetComponent(out magnethand);
 
-            currentDraggedRB.AddForce(force, ForceMode.Force);
+            if (!isMagnetHand || (hasMagnet && magnethand.postiveforce))
+            {
+                Vector3 force = direction.normalized * (pullSpeed * 600f)
+                                - currentDraggedRB.velocity * 8f;
+
+                currentDraggedRB.AddForce(force, ForceMode.Force);
+            }
+
+            if (isMagnetHand && hasMagnet && !magnethand.postiveforce)
+            {
+                if (!massModified)
+                {
+                    oldmass = currentDraggedRB.mass;
+                    currentDraggedRB.mass = 15.0f;
+                    massModified = true;
+                }
+
+                Vector3 force = -direction.normalized * (pullSpeed * 600f)
+                                - currentDraggedRB.velocity * 8f;
+
+                currentDraggedRB.AddForce(force, ForceMode.Force);
+            }
+
+            if (isMagnetHand && hasMagnet && magnethand.postiveforce)
+            {
+                if (!massModified)
+                {
+                    oldmass = currentDraggedRB.mass;
+                    currentDraggedRB.mass = 15.0f;
+                    massModified = true;
+                }
+            }
+
         }
     }
 
@@ -325,13 +363,21 @@ public class LaunchHand : MonoBehaviour
             aimOverride.leftActive = true;
         }
 
+        if (isMagnetHand)
+        {
+            magnetsparks.SetActive(true);
+        }
+
         if (holdingbattery)
         {
             holdingbattery = false;
             battery.transform.parent = null;
             Rigidbody batteryRB = battery.GetComponent<Rigidbody>();
             BoxCollider col = battery.GetComponent<BoxCollider>();
-
+            if (isMagnetHand)
+            {
+                magnetsparks.SetActive(false);
+            }
             batteryRB.isKinematic = false;
 
             if (Hand == "Left")
@@ -551,6 +597,12 @@ public class LaunchHand : MonoBehaviour
 
     private IEnumerator ReturnHand()
     {
+        if (isMagnetHand && currentDraggedRB != null && massModified)
+        {
+            currentDraggedRB.mass = oldmass;
+            massModified = false;
+        }
+
         handTransform.parent = null;
 
         if (battery != null)
@@ -677,7 +729,10 @@ public class LaunchHand : MonoBehaviour
         {
             aimOverride.leftActive = false;
         }
-
+        if (isMagnetHand)
+        {
+            magnetsparks.SetActive(false);
+        }
         returnRoutine = null;
     }
     void LateUpdate()
@@ -690,6 +745,12 @@ public class LaunchHand : MonoBehaviour
 
     public void ForceImmediateReturn()
     {
+        if (isMagnetHand && currentDraggedRB != null && massModified)
+        {
+            currentDraggedRB.mass = oldmass;
+            massModified = false;
+        }
+
         pressure = 0;
         StopAllCoroutines();
         CableSim.isActive = false;
@@ -702,7 +763,11 @@ public class LaunchHand : MonoBehaviour
         handTransform.parent = originalParent;
         handTransform.position = handOrigin.position;
         handTransform.rotation = handOrigin.rotation;
+        if (isMagnetHand)
+        {
+            magnetsparks.SetActive(false);
 
+        }
         //cableRenderer.enabled = false;
         CableSim.InitializeCable();
 

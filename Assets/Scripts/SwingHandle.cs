@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -16,7 +15,8 @@ public class SwingHandle : MonoBehaviour
 
     private bool virtualHeld;
 
-    //bool isMobile = Application.isMobilePlatform;
+    private List<LaunchHand> hands = new List<LaunchHand>();
+
     bool isMobile = false;
 
     public void UIButtonDown()
@@ -29,40 +29,50 @@ public class SwingHandle : MonoBehaviour
         virtualHeld = false;
     }
 
+    void Start()
+    {
+        RefreshHands();
+    }
+
+    void OnTransformChildrenChanged()
+    {
+        RefreshHands();
+    }
+
+    void RefreshHands()
+    {
+        hands.Clear();
+
+        foreach (Transform child in transform)
+        {
+            if (child.TryGetComponent(out LaunchHand hand))
+                hands.Add(hand);
+        }
+    }
+
     void FixedUpdate()
     {
         bool rightHandFound = false;
         bool anyHandFound = false;
 
-        foreach (Transform child in transform)
+        foreach (LaunchHand hand in hands)
         {
-            if (!child.name.StartsWith("Hand"))
+            if (!hand.IsHeld())
                 continue;
 
             anyHandFound = true;
 
-            LaunchHand hand = child.GetComponent<LaunchHand>();
-            if (hand == null)
-                continue;
+            bool rightHand = hand.Hand == "Right";
+            bool leftHand = hand.Hand == "Left";
 
-            bool isHeld = hand.IsHeld();
-
-            bool rightHand =
-                child.name == "Hand_Rocket" ||
-                child.name == "Hand_Red" ||
-                child.name == "Hand_Pressure" ||
-                child.name == "Hand_Conductive";
-
-            bool leftHand = child.name == "Hand_Blue";
-
-            if (rightHand && isHeld)
+            if (rightHand)
             {
                 ApplySwingForce();
                 isgrabbingRight = true;
                 rightHandFound = true;
             }
 
-            if (leftHand && isHeld && !isgrabbingRight)
+            if (leftHand && !isgrabbingRight)
             {
                 ApplySwingForce();
             }
@@ -84,7 +94,7 @@ public class SwingHandle : MonoBehaviour
 
         if (!grabbed)
         {
-            globalaudio.PlayOneShot(swingsfx, 1.0f);
+            globalaudio.PlayOneShot(swingsfx, 1f);
             grabbed = true;
         }
     }
