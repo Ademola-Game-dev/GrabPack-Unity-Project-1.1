@@ -10,6 +10,7 @@ TagManager:
   - Grass
   - Wood
   - Metal
+  - critter
   layers:
   - Default
   - TransparentFX
@@ -36,12 +37,12 @@ TagManager:
   - EMUpickup
   - NoDelete
   - keycard
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - flare
+  - critter
+  - CantClimb
+  - HiddenUV
+  - GlowbyPickup
+  - CritterWall
   - 
   m_SortingLayers:
   - name: Default

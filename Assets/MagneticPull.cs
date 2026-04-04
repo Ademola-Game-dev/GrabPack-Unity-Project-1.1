@@ -79,6 +79,7 @@ public class MagneticPull : MonoBehaviour
                 name == "Hand_Red" ||
                 name == "Hand_Pressure" ||
                 name == "Hand_Magnet" ||
+                name == "Hand_Green" ||
                 name == "Hand_Conductive";
 
             bool leftHand = name == "Hand_Blue";

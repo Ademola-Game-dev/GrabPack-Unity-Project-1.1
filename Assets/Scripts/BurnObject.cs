@@ -13,6 +13,8 @@ public class BurnObject : MonoBehaviour
 
 
     public BoxCollider collider;
+    public BoxCollider collider2;
+
     public SkinnedMeshRenderer renderer;
 
     public Door door;
@@ -47,6 +49,8 @@ public class BurnObject : MonoBehaviour
 
                 renderer.enabled = false;
                 collider.enabled = false;
+                collider2.enabled = false;
+
                 launchhand.return1();
                 door.Locked = false;
             }
@@ -55,6 +59,25 @@ public class BurnObject : MonoBehaviour
         {
             played = false;
 
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("flare"))
+        {
+            if (grabparticles != null)
+            {
+                grabparticles.Play();
+            }
+            globalAudio.PlayOneShot(firesfx, 3.0f);
+            played = true;
+
+            renderer.enabled = false;
+            collider.enabled = false;
+            collider2.enabled = false;
+
+            door.Locked = false;
         }
     }
 }

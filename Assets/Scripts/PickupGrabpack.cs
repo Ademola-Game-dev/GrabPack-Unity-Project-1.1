@@ -10,6 +10,8 @@ public class PickupGrabpack : MonoBehaviour
     public bool hasPressureHand = true;
     public bool hasConductiveHand = true;
     public bool hasMagnetHand = true;
+    public bool hasFireHand = true;
+    public bool hasGreenHand = true;
 
 
     public GameObject RedHand;
@@ -18,6 +20,8 @@ public class PickupGrabpack : MonoBehaviour
     public GameObject conductiveHand;
     public GameObject BlueHand;
     public GameObject MagnetHand;
+    public GameObject FireHand;
+    public GameObject GreenHand;
 
 
     public GameObject MockRedHand;
@@ -26,6 +30,8 @@ public class PickupGrabpack : MonoBehaviour
     public GameObject MockconductiveHand;
     public GameObject MockBlueHand;
     public GameObject MockMagnetHand;
+    public GameObject MockFireHand;
+    public GameObject MockGreenHand;
 
     public HandManager handmanager;
 
@@ -44,6 +50,8 @@ public class PickupGrabpack : MonoBehaviour
         FlareHand.SetActive(false);
         conductiveHand.SetActive(false);
         MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(false);
 
         if (hasRedHand)
             RedHand.SetActive(true);
@@ -55,6 +63,10 @@ public class PickupGrabpack : MonoBehaviour
             conductiveHand.SetActive(true);
         else if (hasMagnetHand)
             MagnetHand.SetActive(true);
+        else if (hasFireHand)
+            FireHand.SetActive(true);
+        else if (hasGreenHand)
+            GreenHand.SetActive(true);
 
         handmanager.hasGrabPack = true;
 
@@ -64,6 +76,8 @@ public class PickupGrabpack : MonoBehaviour
         handmanager.hasPurpleHand = hasPurpleHand;
         handmanager.hasConductiveHand = hasConductiveHand;
         handmanager.hasMagnetHand = hasMagnetHand;
+        handmanager.hasFireHand = hasFireHand;
+        handmanager.hasGreenHand = hasGreenHand;
 
         player.UpdateHandButtons();
 
@@ -99,5 +113,9 @@ public class PickupGrabpack : MonoBehaviour
             MockconductiveHand.SetActive(true);
         else if (hasMagnetHand)
             MockMagnetHand.SetActive(true);
+        else if (hasFireHand)
+            MockFireHand.SetActive(true);
+        else if (hasGreenHand)
+            MockGreenHand.SetActive(true);
     }
 }

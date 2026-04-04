@@ -31,7 +31,7 @@ public class WeaponDragSway : MonoBehaviour
 
     void LateUpdate()
     {
-        Vector3 localVelocity = reference.InverseTransformDirection(rb.velocity);
+        Vector3 localVelocity = reference.InverseTransformDirection(rb.linearVelocity);
         float forwardSpeed = Mathf.Max(0f, localVelocity.z);
 
         Vector3 targetOffset = new Vector3(

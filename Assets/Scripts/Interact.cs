@@ -12,6 +12,7 @@ public class Interact : MonoBehaviour
     public LayerMask handpickups;
     public LayerMask EMUPickup;
     public LayerMask keycard;
+    public LayerMask glowbyPickup;
 
     public Animator grabpack;
     public GameObject interactButtonUI;
@@ -24,7 +25,7 @@ public class Interact : MonoBehaviour
 
     void Start()
     {
-        interactLayers = buttonLayer | CodeCheckerLayer | grabpackinteractable | handpickups | EMUPickup | keycard;
+        interactLayers = buttonLayer | CodeCheckerLayer | grabpackinteractable | handpickups | EMUPickup | keycard | glowbyPickup;
     }
 
     void Update()
@@ -42,8 +43,7 @@ public class Interact : MonoBehaviour
         Camera cam = Camera.main;
         if (cam == null) return;
 
-        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        Ray ray = cam.ScreenPointToRay(screenCenter);
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
         canInteract = Physics.Raycast(ray, interactionRange, interactLayers);
 
@@ -60,8 +60,7 @@ public class Interact : MonoBehaviour
         Camera cam = Camera.main;
         if (cam == null) return;
 
-        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
-        Ray ray = cam.ScreenPointToRay(screenCenter);
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
         RaycastHit hit;
 
@@ -108,6 +107,12 @@ public class Interact : MonoBehaviour
                 KeyCardScanner pickup = hitObject.GetComponent<KeyCardScanner>();
                 if (pickup != null)
                     pickup.Insert();
+            }
+            else if (((1 << hitObject.layer) & glowbyPickup) != 0)
+            {
+                GlowbyPickup pickup = hitObject.GetComponent<GlowbyPickup>();
+                if (pickup != null)
+                    pickup.Pickup();
             }
         }
     }

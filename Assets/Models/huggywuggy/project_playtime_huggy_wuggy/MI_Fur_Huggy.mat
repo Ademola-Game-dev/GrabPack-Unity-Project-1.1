@@ -9,16 +9,20 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: MI_Fur_Huggy
   m_Shader: {fileID: 4800000, guid: 99fa998bbbed3408aafa652b466d261d, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _ALPHABLEND_ON
   - _NORMALMAP
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 1
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
-    RenderType: Opaque
+    RenderType: Fade
   disabledShaderPasses: []
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -45,10 +49,10 @@ Material:
     m_Ints: []
     m_Floats:
     - _CullMode: 0
-    - _DstBlend: 0
+    - _DstBlend: 10
     - _Mode: 2
-    - _SrcBlend: 1
-    - _ZWrite: 1
+    - _SrcBlend: 5
+    - _ZWrite: 0
     - alphaCutoff: 0.5
     - baseColorTexture_texCoord: 0
     - emissiveTexture_texCoord: 0
@@ -68,3 +72,4 @@ Material:
     - normalTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
     - occlusionTexture_Rotation: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1

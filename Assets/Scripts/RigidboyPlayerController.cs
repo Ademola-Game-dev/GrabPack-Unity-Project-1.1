@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class RigidboyPlayerController : MonoBehaviour
 {
+    public float bobSmoothSpeed = 8f;
+    private float currentBob;
+
     public List<LaunchHand> allLaunchHands = new List<LaunchHand>();
     private int currentHandIndex = 0;
     private float scrollSwitchCooldown = 0.25f;
@@ -70,6 +73,8 @@ public class RigidboyPlayerController : MonoBehaviour
     public GameObject conductiveHand;
     public GameObject BlueHand;
     public GameObject MagnetHand;
+    public GameObject FireHand;
+    public GameObject GreenHand;
 
     public string handtoSwitch;
 
@@ -89,12 +94,14 @@ public class RigidboyPlayerController : MonoBehaviour
     public CablePhysics pressurecable;
     public CablePhysics conductivecable;
     public CablePhysics magnetcable;
+    public CablePhysics greencable;
 
     public LaunchHand magnetlaunch;
     public LaunchHand redlaunch;
     public LaunchHand purplelaunch;
     public LaunchHand pressurelaunch;
     public LaunchHand conductivelaunch;
+    public LaunchHand greenlaunch;
 
     public AudioSource footstepSource;
     public AudioClip[] grassFootsteps;
@@ -121,6 +128,7 @@ public class RigidboyPlayerController : MonoBehaviour
     public Color grey;
     public Color yellow;
     public Color white;
+    public Color green;
 
 
     // for mobile controls
@@ -149,6 +157,8 @@ public class RigidboyPlayerController : MonoBehaviour
     public GameObject flareHandButton;
     public GameObject conductiveHandButton;
     public GameObject magnetHandButton;
+    public GameObject fireHandButton;
+    public GameObject greenHandButton;
 
     public bool canSwitch = true;
 
@@ -226,6 +236,14 @@ public class RigidboyPlayerController : MonoBehaviour
         {
             conductiveHand.SetActive(false);
         }
+        if (handmanager.hasFireHand == false)
+        {
+            FireHand.SetActive(false);
+        }
+        if (handmanager.hasGreenHand == false)
+        {
+            GreenHand.SetActive(false);
+        }
 
         InitializeStartingHand();
 
@@ -277,19 +295,43 @@ public class RigidboyPlayerController : MonoBehaviour
 
         if (magnetHandButton != null)
             magnetHandButton.SetActive(handmanager.hasMagnetHand);
+
+        if (fireHandButton != null)
+            fireHandButton.SetActive(handmanager.hasFireHand);
+
+        if (greenHandButton != null)
+            greenHandButton.SetActive(handmanager.hasGreenHand);
+    }
+
+    string GetCurrentHand()
+    {
+        if (RedHand.activeSelf) return "red";
+        if (PurpleHand.activeSelf) return "purple";
+        if (FlareHand.activeSelf) return "flare";
+        if (conductiveHand.activeSelf) return "conductive";
+        if (MagnetHand.activeSelf) return "magnet";
+        if (FireHand.activeSelf) return "fire";
+        if (GreenHand.activeSelf) return "green";
+
+        return "";
     }
 
     void CycleHand(int direction)
     {
         List<string> availableHands = new List<string>();
 
-        if (handmanager.hasRedHand && !RedHand.activeSelf) availableHands.Add("red");
-        if (handmanager.hasPurpleHand && !PurpleHand.activeSelf) availableHands.Add("purple");
-        if (handmanager.hasPressureHand && !FlareHand.activeSelf) availableHands.Add("flare");
-        if (handmanager.hasConductiveHand && !conductiveHand.activeSelf) availableHands.Add("conductive");
-        if (handmanager.hasMagnetHand && !MagnetHand.activeSelf) availableHands.Add("magnet");
+        if (handmanager.hasRedHand) availableHands.Add("red");
+        if (handmanager.hasPurpleHand) availableHands.Add("purple");
+        if (handmanager.hasPressureHand) availableHands.Add("flare");
+        if (handmanager.hasConductiveHand) availableHands.Add("conductive");
+        if (handmanager.hasMagnetHand) availableHands.Add("magnet");
+        if (handmanager.hasFireHand) availableHands.Add("fire");
+        if (handmanager.hasGreenHand) availableHands.Add("green");
 
         if (availableHands.Count == 0) return;
+
+        string currentHand = GetCurrentHand();
+        currentHandIndex = availableHands.IndexOf(currentHand);
 
         currentHandIndex += direction;
 
@@ -337,9 +379,9 @@ public class RigidboyPlayerController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Alpha1) && handmanager.hasRedHand)
             {
-                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false)
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
                 {
-                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false)
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && greenlaunch.holdingbattery == false && magnetlaunch.holdingbattery == false)
                     {
                         canSwitch = false;
                         playeranimations.SetBool("switch", true);
@@ -352,9 +394,9 @@ public class RigidboyPlayerController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Alpha2) && handmanager.hasPurpleHand)
             {
-                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false)
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
                 {
-                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false)
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && greenlaunch.holdingbattery == false && magnetlaunch.holdingbattery == false)
                     {
                         canSwitch = false;
 
@@ -368,9 +410,9 @@ public class RigidboyPlayerController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Alpha3) && handmanager.hasPressureHand)
             {
-                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false)
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
                 {
-                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false)
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && greenlaunch.holdingbattery == false && magnetlaunch.holdingbattery == false)
                     {
                         canSwitch = false;
 
@@ -384,9 +426,9 @@ public class RigidboyPlayerController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Alpha4) && handmanager.hasConductiveHand)
             {
-                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false)
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
                 {
-                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false)
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && greenlaunch.holdingbattery == false && magnetlaunch.holdingbattery == false)
                     {
                         canSwitch = false;
 
@@ -400,9 +442,9 @@ public class RigidboyPlayerController : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.Alpha5) && handmanager.hasMagnetHand)
             {
-                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false)
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
                 {
-                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && magnetlaunch.holdingbattery == false)
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && magnetlaunch.holdingbattery == false && greenlaunch.holdingbattery == false)
                     {
                         canSwitch = false;
 
@@ -410,6 +452,37 @@ public class RigidboyPlayerController : MonoBehaviour
                         playeranimations.SetTrigger("Switch");
 
                         handtoSwitch = "magnet";
+                    }
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha6) && handmanager.hasFireHand)
+            {
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
+                {
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && magnetlaunch.holdingbattery == false && greenlaunch.holdingbattery == false)
+                    {
+                        canSwitch = false;
+
+                        playeranimations.SetBool("switch", true);
+                        playeranimations.SetTrigger("Switch");
+
+                        handtoSwitch = "fire";
+                    }
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha7) && handmanager.hasGreenHand)
+            {
+                if (redcable.isActive == false && purplecable.isActive == false && pressurecable.isActive == false && conductivecable.isActive == false && magnetcable.isActive == false && greencable.isActive == false)
+                {
+                    if (redlaunch.holdingbattery == false && purplelaunch.holdingbattery == false && pressurelaunch.holdingbattery == false && conductivelaunch.holdingbattery == false && magnetlaunch.holdingbattery == false && greenlaunch.holdingbattery == false)
+                    {
+                        canSwitch = false;
+
+                        playeranimations.SetBool("switch", true);
+                        playeranimations.SetTrigger("Switch");
+
+                        handtoSwitch = "green";
                     }
                 }
             }
@@ -551,6 +624,17 @@ public class RigidboyPlayerController : MonoBehaviour
             {
                 footstepCoroutine = StartCoroutine(PlayFootsteps());
             }
+
+            float moveAmount = new Vector2(moveX, moveZ).magnitude;
+
+            float speedFactor = targetMoveSpeed / moveSpeed;
+
+            float targetBob = moveAmount * speedFactor;
+
+            currentBob = Mathf.Lerp(currentBob, targetBob, bobSmoothSpeed * Time.deltaTime);
+
+            playeranimations.SetFloat("BobIntensity", currentBob);
+
         }
         else
         {
@@ -716,13 +800,13 @@ public class RigidboyPlayerController : MonoBehaviour
     {
         if (!CanMove)
         {
-            rb.velocity = Vector3.zero;
+            rb.linearVelocity = Vector3.zero;
             return;
         }
 
-        rb.velocity = new Vector3(
+        rb.linearVelocity = new Vector3(
             moveDirection.x * currentMoveSpeed,
-            rb.velocity.y,
+            rb.linearVelocity.y,
             moveDirection.z * currentMoveSpeed
         );
     }
@@ -736,7 +820,7 @@ public class RigidboyPlayerController : MonoBehaviour
             if (isGrounded)
             {
                 float footstepInterval = IsCrouched ? 0.8f : (targetMoveSpeed > moveSpeed ? 0.3f : 0.5f);
-                float volume = IsCrouched ? 0.5f : (targetMoveSpeed > moveSpeed ? 0.8f : 0.5f);
+                float volume = IsCrouched ? 0.5f : (targetMoveSpeed > moveSpeed ? 1.5f : 1.0f);
 
                 AudioClip footstepClip = GetFootstepSound();
                 if (footstepClip != null)
@@ -797,8 +881,14 @@ public class RigidboyPlayerController : MonoBehaviour
         {
             magnethand();
         }
-
-
+        if (handtoSwitch == "fire")
+        {
+            firehand();
+        }
+        if (handtoSwitch == "green")
+        {
+            greenhand();
+        }
     }
 
     public void redhand()
@@ -808,6 +898,8 @@ public class RigidboyPlayerController : MonoBehaviour
         FlareHand.SetActive(false);
         conductiveHand.SetActive(false);
         MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(false);
 
     }
 
@@ -818,6 +910,8 @@ public class RigidboyPlayerController : MonoBehaviour
         FlareHand.SetActive(false);
         conductiveHand.SetActive(false);
         MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(false);
 
     }
 
@@ -828,6 +922,8 @@ public class RigidboyPlayerController : MonoBehaviour
         FlareHand.SetActive(true);
         conductiveHand.SetActive(false);
         MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(false);
 
     }
 
@@ -838,6 +934,8 @@ public class RigidboyPlayerController : MonoBehaviour
         FlareHand.SetActive(false);
         conductiveHand.SetActive(true);
         MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(false);
 
     }
     public void magnethand()
@@ -846,7 +944,34 @@ public class RigidboyPlayerController : MonoBehaviour
         PurpleHand.SetActive(false);
         FlareHand.SetActive(false);
         conductiveHand.SetActive(false);
+        FireHand.SetActive(false);
         MagnetHand.SetActive(true);
+        GreenHand.SetActive(false);
+
+    }
+
+    public void firehand()
+    {
+        RedHand.SetActive(false);
+        PurpleHand.SetActive(false);
+        FlareHand.SetActive(false);
+        conductiveHand.SetActive(false);
+        MagnetHand.SetActive(false);
+        FireHand.SetActive(true);
+        GreenHand.SetActive(false);
+
+    }
+
+    public void greenhand()
+    {
+        RedHand.SetActive(false);
+        PurpleHand.SetActive(false);
+        FlareHand.SetActive(false);
+        conductiveHand.SetActive(false);
+        MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(true);
+
     }
 
     private void InitializeStartingHand()
@@ -856,6 +981,8 @@ public class RigidboyPlayerController : MonoBehaviour
         FlareHand.SetActive(false);
         conductiveHand.SetActive(false);
         MagnetHand.SetActive(false);
+        FireHand.SetActive(false);
+        GreenHand.SetActive(false);
 
         BlueHand.SetActive(handmanager.hasBlueHand);
 
@@ -878,6 +1005,14 @@ public class RigidboyPlayerController : MonoBehaviour
         else if (handmanager.hasMagnetHand)
         {
             magnethand();
+        }
+        else if (handmanager.hasFireHand)
+        {
+            firehand();
+        }
+        else if (handmanager.hasGreenHand)
+        {
+            greenhand();
         }
     }
 
@@ -975,24 +1110,51 @@ public class RigidboyPlayerController : MonoBehaviour
             handtoSwitch = "magnet";
             TriggerSwitch();
             canSwitch = false;
-            righthandIcon.color = white;
+            righthandIcon.color = grey;
+            switchmenu.closed();
+        }
+    }
+
+    public void MobileSwitchFire()
+    {
+        if (!mobileIcons.isMobile) return;
+        if (!handmanager.hasFireHand) return;
+        if (!CanSwitchHands()) return;
+
+        if (!FireHand.activeSelf)
+        {
+            handtoSwitch = "fire";
+            TriggerSwitch();
+            canSwitch = false;
+            righthandIcon.color = red;
+            switchmenu.closed();
+        }
+    }
+
+    public void MobileSwitchGreen()
+    {
+        if (!mobileIcons.isMobile) return;
+        if (!handmanager.hasGreenHand) return;
+        if (!CanSwitchHands()) return;
+
+        if (!GreenHand.activeSelf)
+        {
+            handtoSwitch = "green";
+            TriggerSwitch();
+            canSwitch = false;
+            righthandIcon.color = green;
             switchmenu.closed();
         }
     }
 
     bool CanSwitchHands()
     {
-        if (redcable.isActive || purplecable.isActive || pressurecable.isActive || conductivecable.isActive)
+        if (redcable.isActive || purplecable.isActive || pressurecable.isActive || conductivecable.isActive || magnetcable.isActive || greencable.isActive)
             return false;
 
-        if (redlaunch.holdingbattery || purplelaunch.holdingbattery || pressurelaunch.holdingbattery || conductivelaunch.holdingbattery)
+        if (redlaunch.holdingbattery || purplelaunch.holdingbattery || pressurelaunch.holdingbattery || conductivelaunch.holdingbattery || magnetlaunch.holdingbattery || greenlaunch.holdingbattery)
             return false;
 
-        if (magnetcable.isActive)
-            return false;
-
-        if (magnetlaunch.holdingbattery)
-            return false;
 
         return true;
     }

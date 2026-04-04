@@ -2,9 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System.Collections.Generic;
+using System.Collections;
 
 public class SettingsManager : MonoBehaviour
 {
+    public static SettingsManager Instance;
+
     public Slider sensitivitySlider;
     public TMP_Dropdown qualityDropdown;
     public TMP_Dropdown resolutionDropdown;
@@ -17,7 +20,18 @@ public class SettingsManager : MonoBehaviour
     private const string QualityKey = "QualityLevel";
     private const string VSyncKey = "VSync";
     private const string FullScreenKey = "FullScreen";
-    private const string ResolutionKey = "Resolution"; 
+    private const string ResolutionKey = "Resolution";
+
+    private const string FOVKey = "FOV";
+    public Slider fovSlider;
+    public Camera playerCamera;
+
+    public Slider renderScaleSlider;
+
+    private const string RenderScaleKey = "RenderScale";
+
+    bool isLoading = true;
+
 
     Resolution[] resolutions; 
 
@@ -36,19 +50,42 @@ public class SettingsManager : MonoBehaviour
 
     public WeaponDragSway ItemDrag;
 
+    public RawImage renderImage;
+    private RenderTexture renderTexture;
+
+    void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     void Start()
     {
         SetupQualityDropdown();
         SetupResolutionDropdown();
-        LoadSettings();
 
         fullScreenToggle.onValueChanged.AddListener(SetFullscreen);
         vSyncToggle.onValueChanged.AddListener(SetVSync);
         sensitivitySlider.onValueChanged.AddListener(SetSensitivity);
         qualityDropdown.onValueChanged.AddListener(SetQuality);
-        resolutionDropdown.onValueChanged.AddListener(SetResolution); 
+        resolutionDropdown.onValueChanged.AddListener(SetResolution);
+        fovSlider.onValueChanged.AddListener(SetFOV);
+        fovSlider.minValue = 60f;
+        fovSlider.maxValue = 100f;
+        renderScaleSlider.onValueChanged.AddListener(SetRenderScale);
+        renderScaleSlider.minValue = 0.1f;
+        renderScaleSlider.maxValue = 1.0f;
+
+        LoadSettings();
+
     }
+
 
     public void Update()
     {
@@ -87,7 +124,7 @@ public class SettingsManager : MonoBehaviour
             Rigidbody rb = playerController.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.velocity = Vector3.zero;
+                rb.linearVelocity = Vector3.zero;
                 rb.angularVelocity = Vector3.zero;
             }
 
@@ -142,10 +179,52 @@ public class SettingsManager : MonoBehaviour
         PlayerPrefs.SetInt(VSyncKey, enabled ? 1 : 0);
     }
 
+    public void SetFOV(float value)
+    {
+        if (playerCamera != null)
+        {
+            playerCamera.fieldOfView = value;
+        }
+
+        if (!isLoading)
+        {
+            PlayerPrefs.SetFloat(FOVKey, value);
+        }
+    }
+
     public void SetFullscreen(bool enabled)
     {
         Screen.fullScreen = enabled;
         PlayerPrefs.SetInt(FullScreenKey, enabled ? 1 : 0);
+    }
+
+    public void SetRenderScale(float scale)
+    {
+        if (playerCamera == null) return;
+
+        int width = Mathf.RoundToInt(Screen.width * scale);
+        int height = Mathf.RoundToInt(Screen.height * scale);
+
+        if (renderTexture != null)
+        {
+            renderTexture.Release();
+        }
+
+        renderTexture = new RenderTexture(width, height, 24);
+
+        playerCamera.targetTexture = renderTexture;
+
+        if (renderImage != null)
+        {
+            renderImage.texture = renderTexture;
+        }
+
+        if (!isLoading)
+        {
+            PlayerPrefs.SetFloat(RenderScaleKey, scale);
+        }
+
+        Debug.Log($"Render Scale: {scale} ({width}x{height})");
     }
 
     public void SetSensitivity(float value)
@@ -222,6 +301,16 @@ public class SettingsManager : MonoBehaviour
             resolutionDropdown.value = savedResolution;
             SetResolution(savedResolution);
         }
+
+        float savedFOV = PlayerPrefs.GetFloat(FOVKey, 81f);
+        fovSlider.value = savedFOV;
+        SetFOV(savedFOV);
+
+        float savedScale = PlayerPrefs.GetFloat(RenderScaleKey, 1f);
+        renderScaleSlider.value = savedScale;
+        SetRenderScale(savedScale);
+
+        isLoading = false;
     }
 
     void UnlockCursor()
@@ -238,5 +327,21 @@ public class SettingsManager : MonoBehaviour
             Cursor.visible = false;
         }
 
+    }
+
+    public void SetActiveCamera(Camera newCam)
+    {
+        if (newCam == null) return;
+
+        if (playerCamera != null)
+        {
+            playerCamera.targetTexture = null;
+            playerCamera.enabled = false;
+        }
+
+        playerCamera = newCam;
+
+        playerCamera.enabled = true;
+        playerCamera.targetTexture = renderTexture;
     }
 }

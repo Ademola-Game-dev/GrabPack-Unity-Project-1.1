@@ -32,6 +32,7 @@ public class GreenReciever : MonoBehaviour
     void Update()
     {
         Transform hand = transform.Find("Hand_Conductive");
+        Transform hand2 = transform.Find("Hand_Green");
 
         if (hand != null)
         {
@@ -54,10 +55,34 @@ public class GreenReciever : MonoBehaviour
                 played = true;
             }
         }
+        else if (hand2 != null)
+        {
+            GreenHand greenhand = hand2.GetComponent<GreenHand>();
+            LaunchHand launchHand = hand2.GetComponent<LaunchHand>();
+
+            if (!played && greenhand != null && greenhand.isPowered == true)
+            {
+                ActivatePower();
+
+                if (grabParticles != null)
+                    grabParticles.Play();
+
+                if (greenSFX != null)
+                    audioSource.PlayOneShot(greenSFX, 3f);
+
+                if (launchHand != null)
+                    launchHand.return1();
+
+                greenhand.Deactivate();
+
+                played = true;
+            }
+        }
         else
         {
             played = false;
         }
+
 
         if (powered)
         {

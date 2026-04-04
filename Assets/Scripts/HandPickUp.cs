@@ -19,6 +19,8 @@ public class HandPickUp : MonoBehaviour
         Pressure,
         Conductive,
         Magnet,
+        Fire,
+        Green,
         Blue
     }
 
@@ -48,6 +50,12 @@ public class HandPickUp : MonoBehaviour
 
             case HandType.Magnet:
                 return handmanager.hasMagnetHand;
+
+            case HandType.Fire:
+                return handmanager.hasFireHand;
+
+            case HandType.Green:
+                return handmanager.hasGreenHand;
 
             case HandType.Blue:
                 return handmanager.hasBlueHand;
@@ -107,6 +115,24 @@ public class HandPickUp : MonoBehaviour
                 player.handtoSwitch = "magnet";
                 player.playeranimations.SetTrigger("Switch");
                 player.MobileSwitchMagnet();
+
+                break;
+
+            case HandType.Fire:
+                handmanager.hasFireHand = true;
+                player.UpdateHandButtons();
+                player.handtoSwitch = "fire";
+                player.playeranimations.SetTrigger("Switch");
+                player.MobileSwitchFire();
+
+                break;
+
+            case HandType.Green:
+                handmanager.hasGreenHand = true;
+                player.UpdateHandButtons();
+                player.handtoSwitch = "green";
+                player.playeranimations.SetTrigger("Switch");
+                player.MobileSwitchGreen();
 
                 break;
 

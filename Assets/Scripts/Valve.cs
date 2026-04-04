@@ -37,6 +37,8 @@ public class Valve : MonoBehaviour
                 child.name == "Hand_Rocket" ||
                 child.name == "Hand_Red" ||
                 child.name == "Hand_Pressure" ||
+                child.name == "Hand_Magnet" ||
+                child.name == "Hand_Green" ||
                 child.name == "Hand_Conductive";
 
             bool leftHand = child.name == "Hand_Blue";

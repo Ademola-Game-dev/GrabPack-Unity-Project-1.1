@@ -308,7 +308,7 @@ public class LaunchHand : MonoBehaviour
             if (!isMagnetHand || (hasMagnet && magnethand.postiveforce))
             {
                 Vector3 force = direction.normalized * (pullSpeed * 600f)
-                                - currentDraggedRB.velocity * 8f;
+                                - currentDraggedRB.linearVelocity * 8f;
 
                 currentDraggedRB.AddForce(force, ForceMode.Force);
             }
@@ -323,7 +323,7 @@ public class LaunchHand : MonoBehaviour
                 }
 
                 Vector3 force = -direction.normalized * (pullSpeed * 600f)
-                                - currentDraggedRB.velocity * 8f;
+                                - currentDraggedRB.linearVelocity * 8f;
 
                 currentDraggedRB.AddForce(force, ForceMode.Force);
             }
@@ -348,6 +348,8 @@ public class LaunchHand : MonoBehaviour
 
     public void FireHand()
     {
+
+
         globalAudio.PlayOneShot(firesfx, 0.7f);
 
         CableSim.isActive = true;
@@ -412,16 +414,19 @@ public class LaunchHand : MonoBehaviour
         playeranimations.SetTrigger("shoot");
         handTransform.parent = null;
         returned = false;
-        Vector3 targetPoint;
 
+        Vector3 targetPoint;
+        Vector3 finalTargetPosition = Vector3.zero;
+        Quaternion finalTargetRotation = handTransform.rotation;
 
         Camera cam = Camera.main;
-        Vector3 screenCenter = new Vector3(Screen.width / 2f, Screen.height / 2f, 0f);
+        Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-
-        Ray ray = cam.ScreenPointToRay(screenCenter); if (Physics.Raycast(ray, out RaycastHit hit, maxRange, raycastLayers))
+        if (Physics.Raycast(ray, out RaycastHit hit, maxRange, raycastLayers))
         {
             targetPoint = hit.point;
+            finalTargetPosition = targetPoint;
+            finalTargetRotation = handTransform.rotation;
 
             if (Hand == "Right")
             {
@@ -435,75 +440,92 @@ public class LaunchHand : MonoBehaviour
             if (Hand == "Right")
             {
                 Vector3 projectedForward = Vector3.ProjectOnPlane(transform.forward, -hit.normal);
-                handTransform.rotation = Quaternion.LookRotation(projectedForward, -hit.normal);
+                Quaternion targetRot = Quaternion.LookRotation(projectedForward, -hit.normal);
+                handTransform.rotation = targetRot;
+                finalTargetRotation = targetRot;
             }
             if (Hand == "Left")
             {
                 Vector3 projectedForward = Vector3.ProjectOnPlane(transform.forward, hit.normal);
-                handTransform.rotation = Quaternion.LookRotation(projectedForward, hit.normal);
+                Quaternion targetRot = Quaternion.LookRotation(projectedForward, hit.normal);
+                handTransform.rotation = targetRot;
+                finalTargetRotation = targetRot;
             }
 
             if (hit.collider.gameObject.tag == (GrabableLayer))
             {
                 CanReturn = false;
-                //handTransform.parent = hit.collider.gameObject.transform;
-
-
 
                 hitOBJ = hit.collider.gameObject;
+
+                SnapHand snap = hitOBJ.GetComponent<SnapHand>();
+
+                if (snap != null)
+                {
+                    Transform snapTarget = snap.GetSnapTarget(Hand);
+
+                    if (snapTarget != null)
+                    {
+                        finalTargetPosition = snapTarget.position;
+                        finalTargetRotation = snapTarget.rotation;
+                    }
+                }
+                else
+                {
+                    if (Hand == "Right")
+                    {
+                        Vector3 projectedForward = Vector3.ProjectOnPlane(transform.forward, -hit.normal);
+                        finalTargetRotation = Quaternion.LookRotation(projectedForward, -hit.normal);
+                    }
+                    if (Hand == "Left")
+                    {
+                        Vector3 projectedForward = Vector3.ProjectOnPlane(transform.forward, hit.normal);
+                        finalTargetRotation = Quaternion.LookRotation(projectedForward, hit.normal);
+                    }
+                }
+
+
                 if (LayerMask.LayerToName(hitOBJ.layer) == "Battery")
                 {
                     holdingbattery = true;
                     handgrabbing.SetBool("grabbing", true);
-
-
-
                 }
-                if (hitOBJ.GetComponent<HandScanner>() == true)
+
+                if (hitOBJ.GetComponent<HandScanner>() != null)
                 {
                     handgrabbing.SetBool("grabbing", false);
                 }
+
                 if (hitOBJ.GetComponent<Rigidbody>() != null)
                 {
                     if (hitOBJ.GetComponent<Barricade>() != null)
                     {
                         br = hitOBJ.GetComponent<Barricade>();
-
                     }
+
                     if (!isPressureHand)
                     {
                         handgrabbing.SetBool("grabbing", true);
-
                     }
 
                     Invoke("EnableDrag", 0.5f);
                     pressure = 0f;
                     pressureHoldTimer = 0f;
                     pressureBuilding = false;
-
                 }
-                if (LayerMask.LayerToName(hitOBJ.layer) == "Grabanimation" || LayerMask.LayerToName(hitOBJ.layer) == "Minecart" || LayerMask.LayerToName(hitOBJ.layer) == "KeyCard")
+
+                if (LayerMask.LayerToName(hitOBJ.layer) == "Grabanimation" ||
+                    LayerMask.LayerToName(hitOBJ.layer) == "Minecart" ||
+                    LayerMask.LayerToName(hitOBJ.layer) == "KeyCard")
                 {
                     handgrabbing.SetBool("grabbing", true);
                 }
-
-
-                if (Hand == "Right")
-                {
-                    Vector3 projectedForward = Vector3.ProjectOnPlane(transform.forward, -hit.normal);
-                    handTransform.rotation = Quaternion.LookRotation(projectedForward, -hit.normal);
-                }
-                if (Hand == "Left")
-                {
-                    Vector3 projectedForward = Vector3.ProjectOnPlane(transform.forward, hit.normal);
-                    handTransform.rotation = Quaternion.LookRotation(projectedForward, hit.normal);
-                }
-
             }
         }
         else
         {
             targetPoint = ray.origin + ray.direction * maxRange;
+            finalTargetPosition = targetPoint;
         }
         Vector3 impactPoint = hit.point;
 
@@ -512,26 +534,26 @@ public class LaunchHand : MonoBehaviour
             StopCoroutine(moveRoutine);
         }
 
-        moveRoutine = StartCoroutine(MoveHand(targetPoint, impactPoint));
+        moveRoutine = StartCoroutine(MoveHand(finalTargetPosition, finalTargetRotation));
     }
-    private IEnumerator MoveHand(Vector3 target, Vector3 impactPoint)
+    private IEnumerator MoveHand(Vector3 targetPos, Quaternion targetRot)
     {
         Vector3 start = handTransform.position;
-        float distance = Vector3.Distance(start, target);
+        float distance = Vector3.Distance(start, targetPos);
         float duration = distance / speed;
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
         {
-            handTransform.position = Vector3.Lerp(start, target, elapsedTime / duration);
+            handTransform.position = Vector3.Lerp(start, targetPos, elapsedTime / duration);
+            handTransform.rotation = Quaternion.Slerp(handTransform.rotation, targetRot, elapsedTime / duration);
             elapsedTime += Time.deltaTime;
             yield return null;
         }
 
-        handTransform.position = target;
+        handTransform.position = targetPos;
         if (hitOBJ != null)
         {
-            handTransform.position = impactPoint;
             handTransform.SetParent(hitOBJ.transform, true);
             if (LayerMask.LayerToName(hitOBJ.layer) == "Battery")
             {
@@ -691,7 +713,7 @@ public class LaunchHand : MonoBehaviour
             CableSim.RemoveLastWrapPoint();
         }
 
-        while (Vector3.Distance(handTransform.position, handOrigin.position) > 0.1f)
+        while (Vector3.Distance(handTransform.position, handOrigin.position) > 1f)
         {
             handTransform.position = Vector3.MoveTowards(
                 handTransform.position,

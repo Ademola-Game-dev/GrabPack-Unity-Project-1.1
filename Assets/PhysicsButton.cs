@@ -11,6 +11,7 @@ public class PhysicsButton : MonoBehaviour
 
     private bool wasPressed = false; 
 
+
     void Awake()
     {
         powerActivator = GetComponent<PowerActivator>();

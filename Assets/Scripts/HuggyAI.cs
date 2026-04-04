@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class HuggyAI : MonoBehaviour
 {
+    public Camera jumpscareCamera;
+
     public Animator animator;
 
     public float patrolAnimSpeed = 0.6f;
@@ -169,7 +171,12 @@ public class HuggyAI : MonoBehaviour
 
     void Chase()
     {
-        agent.SetDestination(player.position);
+        float dist = Vector3.Distance(agent.destination, player.position);
+
+        if (dist > 1f) 
+        {
+            agent.SetDestination(player.position);
+        }
 
         if (!hasplayed)
         {
@@ -230,8 +237,20 @@ public class HuggyAI : MonoBehaviour
         agent.SetDestination(patrolPoints[newIndex].position);
     }
 
+
+    private float visionCheckTimer;
+    public float visionCheckInterval = 0.1f; 
+
     bool CanSeePlayer()
     {
+        visionCheckTimer -= Time.deltaTime;
+
+        if (visionCheckTimer > 0f)
+            return false;
+
+        visionCheckTimer = visionCheckInterval;
+
+
         if (player == null || visionOrigin == null)
             return false;
 
@@ -275,6 +294,8 @@ public class HuggyAI : MonoBehaviour
 
         jumpscareCam.SetActive(true);
         player.gameObject.SetActive(false);
+
+        SettingsManager.Instance.SetActiveCamera(jumpscareCamera);
     }
 
     public void reset()

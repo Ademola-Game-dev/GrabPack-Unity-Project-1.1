@@ -54,7 +54,7 @@ public class JumpPad : MonoBehaviour
 
         float finalForce = baseForce * distanceMultiplier;
 
-        playerRb.velocity = Vector3.zero;
+        playerRb.linearVelocity = Vector3.zero;
         playerRb.AddForce(transform.up * finalForce, ForceMode.Impulse);
 
         hand.return1();

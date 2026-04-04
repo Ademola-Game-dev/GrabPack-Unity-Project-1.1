@@ -6,10 +6,14 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class magnetHand : MonoBehaviour
 {
-    public SkinnedMeshRenderer renderer;
+    public MeshRenderer renderer;
+    public SkinnedMeshRenderer handrenderer;
 
     public Material positive;
     public Material negative;
+
+    public Material positiveHand;
+    public Material negativeHand;
 
     public bool postiveforce = true;
 
@@ -37,10 +41,14 @@ public class magnetHand : MonoBehaviour
         if (postiveforce)
         {
             renderer.material = positive;
+            handrenderer.material = positiveHand;
+
         }
         if (!postiveforce)
         {
             renderer.material = negative;
+            handrenderer.material = negativeHand;
+
         }
     }
 
