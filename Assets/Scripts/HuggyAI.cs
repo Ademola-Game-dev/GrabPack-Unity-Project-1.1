@@ -239,43 +239,42 @@ public class HuggyAI : MonoBehaviour
 
 
     private float visionCheckTimer;
-    public float visionCheckInterval = 0.1f; 
+    public float visionCheckInterval = 0.1f;
+
+    private bool canSeePlayerCached;
 
     bool CanSeePlayer()
     {
         visionCheckTimer -= Time.deltaTime;
 
         if (visionCheckTimer > 0f)
-            return false;
+            return canSeePlayerCached;
 
         visionCheckTimer = visionCheckInterval;
 
-
         if (player == null || visionOrigin == null)
-            return false;
+            return canSeePlayerCached = false;
 
         Vector3 eyePos = visionOrigin.position;
         Vector3 dirToPlayer = (player.position + Vector3.up * 1f - eyePos);
         float distance = dirToPlayer.magnitude;
 
         if (distance > visionRange)
-            return false;
+            return canSeePlayerCached = false;
 
         float angle = Vector3.Angle(visionOrigin.forward, dirToPlayer);
 
         if (angle > visionAngle * 0.5f)
-            return false;
+            return canSeePlayerCached = false;
 
         RaycastHit hit;
         if (Physics.Raycast(eyePos, dirToPlayer.normalized, out hit, visionRange, visionMask, QueryTriggerInteraction.Collide))
         {
-            Debug.Log("Ray hit: " + hit.transform.name + " Layer: " + LayerMask.LayerToName(hit.transform.gameObject.layer));
-
             if (hit.transform.CompareTag("Player"))
-                return true;
+                return canSeePlayerCached = true;
         }
 
-        return false;
+        return canSeePlayerCached = false;
     }
 
     public void OnTriggerEnter(Collider other)

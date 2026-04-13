@@ -7,7 +7,7 @@ AnimationClip:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Armature_A_FirstPersonPlayer_HandSwitch
-  serializedVersion: 6
+  serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
   m_UseHighQualityCurve: 1
@@ -4011,6 +4011,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 828557510
       attribute: 1
@@ -4018,6 +4020,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2604810843
       attribute: 1
@@ -4025,6 +4029,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4252520507
       attribute: 1
@@ -4032,6 +4038,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3167396915
       attribute: 1
@@ -4039,6 +4047,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 944150417
       attribute: 2
@@ -4046,6 +4056,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2604810843
       attribute: 2
@@ -4053,6 +4065,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4252520507
       attribute: 2
@@ -4060,6 +4074,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3167396915
       attribute: 2
@@ -4067,6 +4083,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3315491506
       attribute: 2
@@ -4074,6 +4092,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 828557510
       attribute: 2
@@ -4081,6 +4101,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3320027636
       attribute: 3
@@ -4088,6 +4110,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2104266162
       attribute: 1
@@ -4095,6 +4119,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3160000220
       attribute: 1
@@ -4102,6 +4128,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1206164396
       attribute: 1
@@ -4109,6 +4137,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1989764108
       attribute: 1
@@ -4116,6 +4146,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 123624901
       attribute: 1
@@ -4123,6 +4155,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3249311502
       attribute: 1
@@ -4130,6 +4164,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2016931013
       attribute: 1
@@ -4137,6 +4173,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3320027636
       attribute: 1
@@ -4144,6 +4182,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2278862751
       attribute: 1
@@ -4151,6 +4191,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3315491506
       attribute: 1
@@ -4158,6 +4200,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4034545277
       attribute: 1
@@ -4165,6 +4209,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2507144829
       attribute: 1
@@ -4172,6 +4218,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 982031447
       attribute: 1
@@ -4179,6 +4227,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4164245606
       attribute: 1
@@ -4186,6 +4236,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1157094817
       attribute: 1
@@ -4193,6 +4245,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 790150912
       attribute: 1
@@ -4200,6 +4254,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1325832138
       attribute: 1
@@ -4207,6 +4263,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1568884289
       attribute: 1
@@ -4214,6 +4272,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 396809254
       attribute: 1
@@ -4221,6 +4281,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3450902882
       attribute: 1
@@ -4228,6 +4290,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2290090516
       attribute: 1
@@ -4235,6 +4299,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2104266162
       attribute: 2
@@ -4242,6 +4308,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3160000220
       attribute: 2
@@ -4249,6 +4317,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1206164396
       attribute: 2
@@ -4256,6 +4326,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1989764108
       attribute: 2
@@ -4263,6 +4335,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 123624901
       attribute: 2
@@ -4270,6 +4344,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3249311502
       attribute: 2
@@ -4277,6 +4353,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2016931013
       attribute: 2
@@ -4284,6 +4362,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2278862751
       attribute: 2
@@ -4291,6 +4371,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4034545277
       attribute: 2
@@ -4298,6 +4380,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2507144829
       attribute: 2
@@ -4305,6 +4389,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 982031447
       attribute: 2
@@ -4312,6 +4398,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1157094817
       attribute: 2
@@ -4319,6 +4407,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 790150912
       attribute: 2
@@ -4326,6 +4416,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1325832138
       attribute: 2
@@ -4333,6 +4425,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1568884289
       attribute: 2
@@ -4340,6 +4434,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 396809254
       attribute: 2
@@ -4347,6 +4443,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3450902882
       attribute: 2
@@ -4354,6 +4452,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2290090516
       attribute: 2
@@ -4361,6 +4461,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 944150417
       attribute: 3
@@ -4368,6 +4470,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3249311502
       attribute: 3
@@ -4375,6 +4479,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2016931013
       attribute: 3
@@ -4382,6 +4488,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 828557510
       attribute: 3
@@ -4389,6 +4497,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2604810843
       attribute: 3
@@ -4396,6 +4506,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4252520507
       attribute: 3
@@ -4403,6 +4515,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 3167396915
       attribute: 3
@@ -4410,6 +4524,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2278862751
       attribute: 3
@@ -4417,6 +4533,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4034545277
       attribute: 3
@@ -4424,6 +4542,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 4164245606
       attribute: 3
@@ -4431,6 +4551,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1157094817
       attribute: 3
@@ -4438,6 +4560,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 790150912
       attribute: 3
@@ -4445,6 +4569,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1325832138
       attribute: 3
@@ -4452,6 +4578,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 1568884289
       attribute: 3
@@ -4459,6 +4587,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 396809254
       attribute: 3
@@ -4466,6 +4596,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     - serializedVersion: 2
       path: 2290090516
       attribute: 3
@@ -4473,6 +4605,8 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
     pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
@@ -4495,7 +4629,8 @@ AnimationClip:
     m_HeightFromFeet: 0
     m_Mirror: 0
   m_EditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4523,7 +4658,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4551,7 +4688,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4579,7 +4718,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4607,7 +4748,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4635,7 +4778,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4663,7 +4808,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4691,7 +4838,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4719,7 +4868,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4747,7 +4898,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4775,7 +4928,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4803,7 +4958,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4831,7 +4988,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4859,7 +5018,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4887,7 +5048,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4915,7 +5078,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -4943,7 +5108,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -5223,7 +5390,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -5503,7 +5672,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -5783,7 +5954,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6063,7 +6236,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6091,7 +6266,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6119,7 +6296,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6147,7 +6326,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6175,7 +6356,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6203,7 +6386,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6231,7 +6416,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6259,7 +6446,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6287,7 +6476,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6315,7 +6506,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6343,7 +6536,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6371,7 +6566,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6399,7 +6596,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6643,7 +6842,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -6887,7 +7088,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -7131,7 +7334,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -7375,7 +7580,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -7592,7 +7799,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -7809,7 +8018,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8026,7 +8237,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8243,7 +8456,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8379,7 +8594,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8515,7 +8732,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8651,7 +8870,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8787,7 +9008,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8815,7 +9038,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8843,7 +9068,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8871,7 +9098,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -8899,7 +9128,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -9179,7 +9410,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -9459,7 +9692,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -9739,7 +9974,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10019,7 +10256,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10047,7 +10286,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10075,7 +10316,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10103,7 +10346,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10131,7 +10376,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10159,7 +10406,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10187,7 +10436,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10215,7 +10466,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10243,7 +10496,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10271,7 +10526,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10299,7 +10556,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10327,7 +10586,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10355,7 +10616,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10383,7 +10646,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10411,7 +10676,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10439,7 +10706,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10467,7 +10736,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10495,7 +10766,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10523,7 +10796,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10551,7 +10826,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10579,7 +10856,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10607,7 +10886,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10635,7 +10916,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10663,7 +10946,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10691,7 +10976,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10719,7 +11006,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10747,7 +11036,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10775,7 +11066,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10803,7 +11096,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10831,7 +11126,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10859,7 +11156,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10887,7 +11186,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10915,7 +11216,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10943,7 +11246,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10971,7 +11276,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -10999,7 +11306,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11027,7 +11336,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11055,7 +11366,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11083,7 +11396,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11111,7 +11426,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11139,7 +11456,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11167,7 +11486,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11195,7 +11516,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11223,7 +11546,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11251,7 +11576,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11279,7 +11606,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11307,7 +11636,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11335,7 +11666,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11363,7 +11696,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11391,7 +11726,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11419,7 +11756,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11447,7 +11786,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11475,7 +11816,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11737,7 +12080,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -11999,7 +12344,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12261,7 +12608,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12289,7 +12638,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12317,7 +12668,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12345,7 +12698,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12373,7 +12728,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12401,7 +12758,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12429,7 +12788,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12457,7 +12818,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12485,7 +12848,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12513,7 +12878,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12541,7 +12908,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12569,7 +12938,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12597,7 +12968,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -12877,7 +13250,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -13157,7 +13532,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -13437,7 +13814,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -13708,7 +14087,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -13979,7 +14360,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -14250,7 +14633,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -14431,7 +14816,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -14612,7 +14999,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -14793,7 +15182,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -14947,7 +15338,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15101,7 +15494,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15255,7 +15650,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15283,7 +15680,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15311,7 +15710,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15339,7 +15740,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15367,7 +15770,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15395,7 +15800,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15423,7 +15830,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15451,7 +15860,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15479,7 +15890,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15507,7 +15920,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15535,7 +15950,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15563,7 +15980,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15591,7 +16010,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15619,7 +16040,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15647,7 +16070,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15675,7 +16100,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15703,7 +16130,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15731,7 +16160,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15759,7 +16190,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15787,7 +16220,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15815,7 +16250,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15843,7 +16280,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15871,7 +16310,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15899,7 +16340,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15927,7 +16370,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15955,7 +16400,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -15983,7 +16430,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16011,7 +16460,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16039,7 +16490,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16067,7 +16520,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16095,7 +16550,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16123,7 +16580,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16151,7 +16610,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16179,7 +16640,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16207,7 +16670,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16235,7 +16700,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16263,7 +16730,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16291,7 +16760,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16319,7 +16790,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16347,7 +16820,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16375,7 +16850,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16403,7 +16880,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16431,7 +16910,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16459,7 +16940,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16487,7 +16970,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16515,7 +17000,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16543,7 +17030,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16571,7 +17060,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16599,7 +17090,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16627,7 +17120,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16655,7 +17150,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16683,7 +17180,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16711,7 +17210,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16739,7 +17240,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16767,7 +17270,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16795,7 +17300,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16823,7 +17330,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16851,7 +17360,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16879,7 +17390,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16907,7 +17420,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16935,7 +17450,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16963,7 +17480,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -16991,7 +17510,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17019,7 +17540,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17047,7 +17570,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17075,7 +17600,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17103,7 +17630,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17131,7 +17660,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17159,7 +17690,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17187,7 +17720,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17215,7 +17750,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17243,7 +17780,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17271,7 +17810,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17299,7 +17840,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17327,7 +17870,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17355,7 +17900,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17383,7 +17930,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17411,7 +17960,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17439,7 +17990,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17467,7 +18020,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17495,7 +18050,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17523,7 +18080,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17551,7 +18110,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17579,7 +18140,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17607,7 +18170,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17635,7 +18200,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17663,7 +18230,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17691,7 +18260,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17728,7 +18299,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17765,7 +18338,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -17802,7 +18377,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -18100,7 +18677,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -18398,7 +18977,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -18696,7 +19277,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -18994,8 +19577,10 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_EulerEditorCurves:
-  - curve:
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19023,7 +19608,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19051,7 +19638,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19079,7 +19668,9 @@ AnimationClip:
     path: Armature
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19107,7 +19698,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19135,7 +19728,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19163,7 +19758,9 @@ AnimationClip:
     path: Armature/Root
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19191,7 +19788,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19219,7 +19818,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19247,7 +19848,9 @@ AnimationClip:
     path: Armature/Root/JNT_Camera
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19275,7 +19878,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19303,7 +19908,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19331,7 +19938,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19611,7 +20220,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -19891,7 +20502,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20171,7 +20784,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20199,7 +20814,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20227,7 +20844,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20255,7 +20874,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20283,7 +20904,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20311,7 +20934,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20339,7 +20964,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20367,7 +20994,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20395,7 +21024,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20423,7 +21054,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_FlashlightLid/JNT_R_Grabpack_FlashlightExtension
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -20721,7 +21354,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -21019,7 +21654,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -21317,7 +21954,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -21561,7 +22200,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -21805,7 +22446,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -22049,7 +22692,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -22266,7 +22911,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -22483,7 +23130,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -22700,7 +23349,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -22836,7 +23487,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -22972,7 +23625,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -23108,7 +23763,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -23136,7 +23793,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -23164,7 +23823,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -23192,7 +23853,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_Grabpack_Tube_01/JNT_R_Grabpack_Tube_02/JNT_R_Grabpack_Tube_03/JNT_R_Grabpack_Tube_04/JNT_R_Grabpack_Tube_05/JNT_R_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -23472,7 +24135,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -23752,7 +24417,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24032,7 +24699,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24060,7 +24729,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24088,7 +24759,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24116,7 +24789,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_R_Grabpack_Gun/JNT_R_HandAttachment_Pivot/JNT_R_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24144,7 +24819,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24172,7 +24849,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24200,7 +24879,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24228,7 +24909,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24256,7 +24939,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24284,7 +24969,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Trigger
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24312,7 +24999,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24340,7 +25029,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24368,7 +25059,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24396,7 +25089,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24424,7 +25119,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24452,7 +25149,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24480,7 +25179,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24508,7 +25209,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24536,7 +25239,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24564,7 +25269,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24592,7 +25299,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24620,7 +25329,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24648,7 +25359,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24676,7 +25389,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24704,7 +25419,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_Grabpack_Tube_01/JNT_L_Grabpack_Tube_02/JNT_L_Grabpack_Tube_03/JNT_L_Grabpack_Tube_04/JNT_L_Grabpack_Tube_05/JNT_L_Grabpack_Tube_06
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24732,7 +25449,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24760,7 +25479,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24788,7 +25509,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24816,7 +25539,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24844,7 +25569,9 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
-  - curve:
+    flags: 16
+  - serializedVersion: 2
+    curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -24872,9 +25599,24 @@ AnimationClip:
     path: Armature/Root/JNT_GrabpackParent/JNT_L_Grabpack_Gun/JNT_L_HandAttachment_Pivot/JNT_L_HandAttachment
     classID: 4
     script: {fileID: 0}
+    flags: 16
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
+  - time: 0
+    functionName: StopSounds
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.041666668
+    functionName: PlaySound
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
   - time: 0.75
     functionName: Switcher
     data: 

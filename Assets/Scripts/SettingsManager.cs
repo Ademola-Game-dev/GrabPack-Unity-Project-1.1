@@ -53,6 +53,13 @@ public class SettingsManager : MonoBehaviour
     public RawImage renderImage;
     private RenderTexture renderTexture;
 
+    public bool disablemouse = true;
+
+    public GameObject wheel;
+
+    private bool wheelclosing = false;
+    private bool wheelopening = false;
+
     void Awake()
     {
         if (Instance == null)
@@ -89,12 +96,52 @@ public class SettingsManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.I))
+        if (Input.GetKeyDown(KeyCode.I) || Input.GetKeyDown(KeyCode.Escape))
         {
             open = !open;
             updateOpenStatus(open);
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            UnlockCursor();
+            playerController.canLook = false;
+            OpenWheel();
+        }
+
+        if (Input.GetKeyUp(KeyCode.Q))
+        {
+            if (!open && disablemouse)
+                LockCursor();
+
+            playerController.canLook = true;
+            CloseWheel();
+        }
     }
+
+    public void OpenWheel()
+    {
+        wheel.SetActive(true);
+
+        foreach (LaunchHand hand in hands)
+        {
+            if (hand != null)
+                hand.enabled = false;
+        }
+    }
+    public void CloseWheel()
+    {
+        wheel.SetActive(false);
+
+        foreach (LaunchHand hand in hands)
+        {
+            if (hand != null)
+                hand.enabled = true;
+        }
+    }
+
+
+
 
     public void ToggleOpen()
     {
@@ -136,7 +183,11 @@ public class SettingsManager : MonoBehaviour
         }
         else
         {
-            LockCursor();
+            if (disablemouse)
+            {
+                LockCursor();
+            }
+            
         }
     }
 
@@ -321,11 +372,15 @@ public class SettingsManager : MonoBehaviour
 
     void LockCursor()
     {
-        if (mobileIcons.isMobile == false)
+        if (disablemouse)
         {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
+            if (mobileIcons.isMobile == false)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
         }
+
 
     }
 

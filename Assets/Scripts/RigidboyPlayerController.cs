@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class RigidboyPlayerController : MonoBehaviour
 {
+    public bool canLook = true;
+
     public float bobSmoothSpeed = 8f;
     private float currentBob;
 
@@ -507,9 +509,14 @@ public class RigidboyPlayerController : MonoBehaviour
 
         if (!squeeze)
         {
-            targetX -= mouseY;
-            targetX = Mathf.Clamp(targetX, -90f, 90f);
-            targetY += mouseX;
+            
+            if (canLook)
+            {
+                targetX -= mouseY;
+                targetX = Mathf.Clamp(targetX, -90f, 90f);
+                targetY += mouseX;
+            }
+
         }
 
         if (mobileIcons.isMobile)
@@ -1034,7 +1041,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchRed()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasRedHand) return;
         if (!CanSwitchHands()) return;
 
@@ -1051,7 +1057,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchPurple()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasPurpleHand) return;
         if (!CanSwitchHands()) return;
 
@@ -1068,7 +1073,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchFlare()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasPressureHand) return;
         if (!CanSwitchHands()) return;
 
@@ -1085,7 +1089,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchConductive()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasConductiveHand) return;
         if (!CanSwitchHands()) return;
 
@@ -1101,7 +1104,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchMagnet()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasMagnetHand) return;
         if (!CanSwitchHands()) return;
 
@@ -1117,7 +1119,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchFire()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasFireHand) return;
         if (!CanSwitchHands()) return;
 
@@ -1133,7 +1134,6 @@ public class RigidboyPlayerController : MonoBehaviour
 
     public void MobileSwitchGreen()
     {
-        if (!mobileIcons.isMobile) return;
         if (!handmanager.hasGreenHand) return;
         if (!CanSwitchHands()) return;
 

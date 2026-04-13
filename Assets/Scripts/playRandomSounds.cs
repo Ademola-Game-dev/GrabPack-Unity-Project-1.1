@@ -22,4 +22,9 @@ public class playRandomSounds : MonoBehaviour
 
         audiosource.PlayOneShot(footsteps[selected], 1.0f);
     }
+
+    public void StopSounds()
+    {
+        audiosource.Stop();
+    }
 }
